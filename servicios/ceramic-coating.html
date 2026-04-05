@@ -758,6 +758,7 @@ main {
   line-height: 1.95;
 }
 
+.service-detail--editorial .service-detail__lead + .service-detail__body,
 .service-detail--editorial .service-detail__body + .service-detail__body {
   margin-top: 1.35rem;
 }
@@ -1029,7 +1030,7 @@ main {
       </div>
     </section>
 
-    <section class="service-packages" aria-labelledby="ceramic-packages-title">
+    <section class="service-packages" data-mobile-package-tabs aria-labelledby="ceramic-packages-title">
       <div class="service-packages__inner">
         <div class="service-packages__intro">
           <div>
@@ -1177,9 +1178,11 @@ main {
   <script src="../js/header.js" defer></script>
   <script src="../js/includes.js" defer></script>
   <script src="../js/service-hero.js" defer></script>
+  <script src="../js/service-benefits.js" defer></script>
   <script src="../js/service-reasons.js" defer></script>
   <script src="../js/service-gallery.js" defer></script>
   <script src="../js/service-faq.js" defer></script>
+  <script src="../js/service-packages-mobile.js" defer></script>
 </body>
 </html>
 

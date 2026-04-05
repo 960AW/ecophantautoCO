@@ -758,6 +758,7 @@ main {
   line-height: 1.95;
 }
 
+.service-detail--editorial .service-detail__lead + .service-detail__body,
 .service-detail--editorial .service-detail__body + .service-detail__body {
   margin-top: 1.35rem;
 }
@@ -1023,7 +1024,7 @@ main {
       </div>
     </section>
 
-    <section class="service-packages" aria-labelledby="polarizado-packages-title">
+    <section class="service-packages" data-mobile-package-tabs aria-labelledby="polarizado-packages-title">
       <div class="service-packages__inner">
         <div class="service-packages__intro">
           <div>
@@ -1129,11 +1130,10 @@ main {
       <div class="service-local-seo__inner">
         <div class="service-local-seo__intro">
           <span class="service-local-seo__eyebrow">Polarizados en Bogot&aacute;</span>
-          <h2 id="polarizado-local-title" class="service-local-seo__title site-display-font">Polarizado Bogot&aacute; y atenci&oacute;n real para quien busca polarizado cerca de m&iacute;.</h2>
+          <h2 id="polarizado-local-title" class="service-local-seo__title site-display-font">Polarizado Bogot&aacute; y atenci&oacute;n real para quien busca polarizado al norte de la ciudad.</h2>
         </div>
         <div class="service-local-seo__grid">
-          <p>Atendemos clientes del norte de Bogot&aacute; y de otras zonas que quieren polarizado con mejor confort t&eacute;rmico, privacidad y protecci&oacute;n UV sin caer en un resultado visual pesado o mal instalado. Estamos en la Calle 127, una ubicaci&oacute;n pr&aacute;ctica para quienes buscan polarizado cerca de m&iacute; en Bogot&aacute;.</p>
-          <p>Si est&aacute;s buscando <strong>polarizado Bogot&aacute;</strong>, normalmente tambi&eacute;n comparas t&eacute;rminos como <strong>polarizado de vidrios</strong>, <strong>polarizado de carro</strong> o incluso <strong>polarizado cerca de m&iacute;</strong>. Conviene elegir el nivel adecuado seg&uacute;n uso diario, panor&aacute;mico, parqueo al sol y expectativa est&eacute;tica. Para un proyecto m&aacute;s integral, muchos clientes lo combinan con <a href="/servicios/ceramic-coating">ceramic coating</a> o con <a href="/servicios/auto-detailing">auto detailing premium en Bogot&aacute;</a>.</p>
+          <p>Atendemos clientes del norte de Bogot&aacute; y de otras zonas que buscan un polarizado que realmente mejore el confort t&eacute;rmico, la privacidad y la protecci&oacute;n UV, sin comprometer la est&eacute;tica ni caer en acabados pesados o mal instalados. Estamos ubicados en la Calle 127, en un punto pr&aacute;ctico para quienes buscan polarizado cerca de m&iacute; en Bogot&aacute;.</p><p>Si est&aacute;s buscando <strong>polarizado en Bogot&aacute;</strong>, es normal que tambi&eacute;n compares t&eacute;rminos como <strong>polarizado de vidrios</strong>, <strong>polarizado de carro</strong> o <strong>polarizado cerca de m&iacute;</strong>. La clave est&aacute; en elegir el nivel adecuado seg&uacute;n el uso diario, el tipo de vidrio, la exposici&oacute;n al sol y el resultado visual que esperas. Para un enfoque m&aacute;s completo, muchos clientes lo combinan con <a href="/servicios/ceramic-coating">ceramic coating</a> o con <a href="/servicios/auto-detailing">auto detailing premium en Bogot&aacute;</a>.</p>
         </div>
       </div>
     </section>
@@ -1170,9 +1170,11 @@ main {
   <script src="../js/header.js" defer></script>
   <script src="../js/includes.js" defer></script>
   <script src="../js/service-hero.js" defer></script>
+  <script src="../js/service-benefits.js" defer></script>
   <script src="../js/service-reasons.js" defer></script>
   <script src="../js/service-gallery.js" defer></script>
   <script src="../js/service-faq.js" defer></script>
+  <script src="../js/service-packages-mobile.js" defer></script>
 </body>
 </html>
 

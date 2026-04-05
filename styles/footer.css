@@ -410,6 +410,7 @@
   margin-top: 0.2rem;
   color: rgba(255, 255, 255, 0.78);
   font-size: 0.78rem;
+  display:none;
 }
 
 .site-footer__review-stars {

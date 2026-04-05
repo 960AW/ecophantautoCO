@@ -509,17 +509,20 @@
 }
 
 @media (max-width: 767px) {
+  .service-packages--ppf-tabs .service-packages__footer {
+  margin-top: 0;
+}
   .service-packages--ppf-tabs .service-packages__tabs {
     grid-template-columns: 1fr;
     gap: 0.75rem;
   }
 
   .service-packages--ppf-tabs .service-packages__tab {
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .service-packages__tab-label {
-    font-size: 0.95rem;
+    font-size: 0.88rem;
   }
 
   .service-packages__panel-visual {
@@ -630,7 +633,7 @@
 }
 
 .service-packages--ppf-tabs .service-packages__panel-copy {
-  padding: 2.15rem 1.8rem !important;
+  padding: 0.15rem 1.8rem !important;
 }
 
 @media (max-width: 1023px) {
@@ -854,6 +857,76 @@
     }
 
     .service-packages--ppf-tabs .service-packages__panel-copy {
-        padding-top: 1rem !important;
+        padding-top: 0.5rem !important;
     }
+}
+
+.service-packages__mobile-tabs {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  [data-mobile-package-tabs] .service-packages__mobile-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  [data-mobile-package-tabs] .service-packages__mobile-tab {
+    position: relative;
+    display: grid;
+    gap: 0.35rem;
+    justify-items: start;
+    width: 100%;
+    padding: 0.7rem 0.55rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(15, 15, 15, 0.68) 100%);
+    color: rgba(255, 255, 255, 0.76);
+    text-align: left;
+    transition: border-color 180ms ease, transform 180ms ease, background 180ms ease, color 180ms ease;
+  }
+
+  [data-mobile-package-tabs] .service-packages__mobile-tab::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 0.16rem;
+    background: rgba(123, 187, 39, 0.22);
+  }
+
+  [data-mobile-package-tabs] .service-packages__mobile-tab.is-active {
+    border-color: rgba(123, 187, 39, 0.34);
+    color: #ffffff;
+    background: linear-gradient(180deg, rgba(123, 187, 39, 0.13) 0%, rgba(14, 16, 13, 0.92) 100%);
+    transform: translateY(-0.18rem);
+  }
+
+  [data-mobile-package-tabs] .service-packages__mobile-tab-step {
+    color: #9bd63b;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  [data-mobile-package-tabs] .service-packages__mobile-tab-label {
+    color: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1.45;
+    text-wrap: balance;
+  }
+
+  [data-mobile-package-tabs] .service-packages__grid {
+    display: block;
+  }
+
+  [data-mobile-package-tabs] .service-packages__card {
+    display: none;
+  }
+
+  [data-mobile-package-tabs] .service-packages__card.is-mobile-active {
+    display: flex;
+  }
 }

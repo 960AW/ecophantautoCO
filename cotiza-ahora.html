@@ -73,7 +73,7 @@
       <div class="quote-form-hero__actions">
         <a href="https://wa.me/573122222748" class="quote-button quote-button--brand">WhatsApp</a>
         <a href="tel:+573122222748" class="quote-button quote-button--brand quote-button--brand-mid">Ll&aacute;manos</a>
-        <button type="button" class="quote-button quote-button--brand quote-button--brand-soft" id="quote-inline-toggle" aria-controls="quote-inline-shell" aria-expanded="false">Escr&iacute;benos</button>
+        <button type="button" class="quote-button quote-button--brand quote-button--brand-soft" id="quote-inline-toggle" aria-controls="quote-inline-shell" aria-expanded="false">Formulario de contacto</button>
       </div>
     </div>
     <aside class="quote-form-hero__panel quote-form-hero__panel--inline">
@@ -302,8 +302,31 @@
   (function () {
     var toggleButton = document.getElementById('quote-inline-toggle');
     var inlineShell = document.getElementById('quote-inline-shell');
+    var heroInner = document.querySelector('.quote-form-hero__inner');
+    var heroPanel = document.querySelector('.quote-form-hero__panel--inline');
+    var main = document.querySelector('main.quote-page--form');
 
-    if (!toggleButton || !inlineShell) return;
+    if (!toggleButton || !inlineShell || !heroInner || !heroPanel || !main) return;
+
+    var originalParent = inlineShell.parentNode;
+    var originalNextSibling = inlineShell.nextSibling;
+
+    function syncInlineShellPosition() {
+      if (window.innerWidth <= 767) {
+        if (inlineShell.parentNode !== heroInner) {
+          heroInner.insertBefore(inlineShell, heroPanel);
+        }
+        return;
+      }
+
+      if (inlineShell.parentNode !== originalParent) {
+        if (originalNextSibling && originalNextSibling.parentNode === originalParent) {
+          originalParent.insertBefore(inlineShell, originalNextSibling);
+        } else {
+          originalParent.appendChild(inlineShell);
+        }
+      }
+    }
 
     toggleButton.addEventListener('click', function () {
       var isHidden = inlineShell.hasAttribute('hidden');
@@ -318,6 +341,9 @@
         toggleButton.setAttribute('aria-expanded', 'false');
       }
     });
+
+    window.addEventListener('resize', syncInlineShellPosition);
+    syncInlineShellPosition();
   })();
 </script>
 </body>

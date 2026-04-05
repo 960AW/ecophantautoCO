@@ -1,7 +1,5 @@
 .quote-page--form {
-  background:
-    radial-gradient(circle at 50% 24rem, rgba(138, 201, 38, 0.22), transparent 26%),
-    linear-gradient(180deg, #0b0b0b 0%, #111111 18rem, #eff4e2 18rem, #e6edd5 100%);
+  background:black;
 }
 
 .quote-kicker {
@@ -887,7 +885,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(17, 17, 17, 0.92);
   backdrop-filter: blur(10px);
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   box-shadow: 0 32px 64px -40px rgba(0, 0, 0, 0.56);
 }
 
@@ -915,5 +913,24 @@
 
   .quote-inline-shell__card {
     width: 100%;
+  }
+}
+
+.leform-inline .leform-form-69 {padding:0!important}
+@media (max-width: 767px) {
+  .quote-form-hero__inner > .quote-inline-shell {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .quote-form-hero__inner > .quote-inline-shell .quote-inline-shell__inner {
+    display: block;
+  }
+
+  .quote-form-hero__inner > .quote-inline-shell .quote-inline-shell__card {
+    width: 100%;
+    margin: 0;
+    padding: 1rem 0 0.25rem;
   }
 }
