@@ -116,10 +116,10 @@
   margin-left: max(0px, calc((100vw - 80rem) / 2));
 }
 
-.hero-slider__eyebrow,
-.hero-slider__title,
-.hero-slider__description,
-.hero-slider__cta-group {
+.hero-slider[data-ready="true"] .hero-slider__eyebrow,
+.hero-slider[data-ready="true"] .hero-slider__title,
+.hero-slider[data-ready="true"] .hero-slider__description,
+.hero-slider[data-ready="true"] .hero-slider__cta-group {
   opacity: 0;
   transform: translate3d(0, 28px, 0);
   transition:
@@ -127,35 +127,35 @@
     transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.hero-slider__slide.is-active .hero-slider__eyebrow,
-.hero-slider__slide.is-active .hero-slider__title,
-.hero-slider__slide.is-active .hero-slider__description,
-.hero-slider__slide.is-active .hero-slider__cta-group {
+.hero-slider[data-ready="true"] .hero-slider__slide.is-active .hero-slider__eyebrow,
+.hero-slider[data-ready="true"] .hero-slider__slide.is-active .hero-slider__title,
+.hero-slider[data-ready="true"] .hero-slider__slide.is-active .hero-slider__description,
+.hero-slider[data-ready="true"] .hero-slider__slide.is-active .hero-slider__cta-group {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
 
-.hero-slider__slide.is-active .hero-slider__eyebrow {
+.hero-slider[data-ready="true"] .hero-slider__slide.is-active .hero-slider__eyebrow {
   transition-delay: 120ms;
 }
 
-.hero-slider__slide.is-active .hero-slider__title {
+.hero-slider[data-ready="true"] .hero-slider__slide.is-active .hero-slider__title {
   transition-delay: 220ms;
 }
 
-.hero-slider__slide.is-active .hero-slider__description {
+.hero-slider[data-ready="true"] .hero-slider__slide.is-active .hero-slider__description {
   transition-delay: 320ms;
 }
 
-.hero-slider__slide.is-active .hero-slider__cta-group {
+.hero-slider[data-ready="true"] .hero-slider__slide.is-active .hero-slider__cta-group {
   transition-delay: 420ms;
 }
 
-.hero-slider[data-direction="next"] .hero-slider__slide.is-active .hero-slider__content {
+.hero-slider[data-ready="true"][data-direction="next"] .hero-slider__slide.is-active .hero-slider__content {
   animation: hero-content-enter-next 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-.hero-slider[data-direction="prev"] .hero-slider__slide.is-active .hero-slider__content {
+.hero-slider[data-ready="true"][data-direction="prev"] .hero-slider__slide.is-active .hero-slider__content {
   animation: hero-content-enter-prev 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 

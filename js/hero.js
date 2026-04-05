@@ -262,4 +262,7 @@ if (heroSlider) {
   ensureSlideMedia(activeIndex);
   syncSlides(activeIndex);
   scheduleAutoplay();
+  window.requestAnimationFrame(() => {
+    heroSlider.dataset.ready = 'true';
+  });
 }
