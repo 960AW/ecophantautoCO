@@ -144,8 +144,9 @@ if (heroSlider) {
     if (!progressBar) return;
 
     progressBar.classList.remove('is-animating');
-    void progressBar.offsetWidth;
-    progressBar.classList.add('is-animating');
+    window.requestAnimationFrame(() => {
+      progressBar.classList.add('is-animating');
+    });
   };
 
   const syncSlides = (nextIndex) => {
