@@ -13,12 +13,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
+    rel="preload"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
   >
-  <link rel="stylesheet" href="./styles/tailwind-output.css">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap"></noscript>
+  <link rel="preload" href="./styles/tailwind-output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="stylesheet" href="./styles/base.css">
-  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="preload" href="./styles/header.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="stylesheet" href="./styles/hero.css">
+  <noscript><link rel="stylesheet" href="./styles/tailwind-output.css"></noscript>
+  <noscript><link rel="stylesheet" href="./styles/header.css"></noscript>
   <link rel="preload" href="./styles/about.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="./styles/services.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="./styles/blog-home.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
