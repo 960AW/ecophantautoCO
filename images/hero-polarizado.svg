@@ -1,0 +1,25 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#080808"/>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <path d="M194 360H1378" stroke="#212121" stroke-width="2"/>
+  <path d="M262 306H1310" stroke="#7BBB27" stroke-opacity="0.34" stroke-width="3"/>
+  <rect x="284" y="238" width="1020" height="438" fill="#0A0A0A" stroke="#7BBB27" stroke-opacity="0.4" stroke-width="3"/>
+  <rect x="336" y="288" width="916" height="338" fill="url(#glass)"/>
+  <path d="M408 634L744 312" stroke="#D8F0A7" stroke-opacity="0.3" stroke-width="3"/>
+  <path d="M574 634L910 312" stroke="#D8F0A7" stroke-opacity="0.3" stroke-width="3"/>
+  <rect x="108" y="108" width="322" height="54" rx="0" fill="#101010" stroke="#32451B"/>
+  <text x="140" y="144" fill="#C0DA90" font-size="22" font-family="Montserrat, Arial, sans-serif" letter-spacing="4">POLARIZADO DE VIDRIOS</text>
+  <text x="138" y="835" fill="rgba(255,255,255,0.74)" font-size="32" font-family="Montserrat, Arial, sans-serif" letter-spacing="6">HEAT REDUCTION AND PRIVACY</text>
+  <defs>
+    <linearGradient id="bg" x1="1430" y1="98" x2="210" y2="882" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#141414"/>
+      <stop offset="0.52" stop-color="#0E120C"/>
+      <stop offset="1" stop-color="#060606"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="336" y1="288" x2="1252" y2="626" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7BBB27" stop-opacity="0.2"/>
+      <stop offset="0.46" stop-color="#101010" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#7BBB27" stop-opacity="0.14"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,18 @@
+<svg width="760" height="540" viewBox="0 0 760 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="760" height="540" fill="#0B0B0B"/>
+  <rect width="760" height="540" fill="url(#bg)"/>
+  <circle cx="580" cy="136" r="112" fill="#7BBB27" fill-opacity="0.16"/>
+  <rect x="108" y="166" width="544" height="210" fill="#111111" stroke="#7BBB27" stroke-opacity="0.28" stroke-width="2"/>
+  <path d="M138 246H622" stroke="#DCE8C8" stroke-opacity="0.34" stroke-width="3"/>
+  <path d="M138 296H622" stroke="#DCE8C8" stroke-opacity="0.34" stroke-width="3"/>
+  <rect x="66" y="68" width="230" height="44" fill="#101010" stroke="#31471A"/>
+  <text x="94" y="98" fill="#C9E58C" font-size="18" font-family="Montserrat, Arial, sans-serif" letter-spacing="3">CERAMIC PRO</text>
+  <text x="66" y="474" fill="#FFFFFF" fill-opacity="0.72" font-size="22" font-family="Montserrat, Arial, sans-serif" letter-spacing="4">ELITE DEALER STANDARD</text>
+  <defs>
+    <linearGradient id="bg" x1="648" y1="74" x2="92" y2="488" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#171717"/>
+      <stop offset="0.48" stop-color="#12160F"/>
+      <stop offset="1" stop-color="#080808"/>
+    </linearGradient>
+  </defs>
+</svg>

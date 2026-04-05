@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #7BBB27;
+  --color-brand-dark: #5c9319;
+  --color-ink: #101010;
+  --color-mist: #f5f7f2;
+  --shadow-soft: 0 20px 45px -28px rgba(0, 0, 0, 0.45);
+}
+
+@source "../index.html";
+@source "../quienes-somos.html";
+@source "../components/*.html";
+@source "../servicios/*.html";
+@source "../styles/service-hero.css";
+@source "../blog-detailing/*.html";
+@source "../js/*.js";

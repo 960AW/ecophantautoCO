@@ -1,0 +1,167 @@
+.service-benefits {
+  padding: 80px 1.5rem 6rem;
+  background: #ffffff;
+}
+
+.service-benefits__inner {
+  width: min(100%, 80rem);
+  margin: 0 auto;
+}
+
+.service-benefits__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: 2.7rem;
+}
+
+.service-benefits__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.15rem;
+  border: 1px solid rgba(16, 16, 16, 0.1);
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0.8rem 0.95rem;
+  color: rgba(16, 16, 16, 0.58);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.service-benefits__title {
+  margin: 0;
+  color: #111111;
+  font-size: clamp(2.35rem, 4.4vw, 4.4rem);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.service-benefits__lead {
+  max-width: 39rem;
+  margin: 0 auto;
+  color: rgba(16, 16, 16, 0.68);
+  font-size: 1rem;
+  line-height: 1.9;
+  text-wrap: pretty;
+  text-align: center;
+}
+
+.service-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.service-benefits__card {
+  position: relative;
+  min-height: 15rem;
+  border: 1px solid rgba(16, 16, 16, 0.08);
+  background: rgba(255, 255, 255, 0.58);
+  padding: 1.7rem 1.55rem;
+  box-shadow: 0 20px 38px -32px rgba(0, 0, 0, 0.22);
+  text-align: center;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background-color 220ms ease;
+}
+
+.service-benefits__card::after {
+  content: '';
+  position: absolute;
+  right: 1.2rem;
+  left: 1.2rem;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #7bbb27 50%, transparent 100%);
+  transform: scaleX(0.35);
+  opacity: 0;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.service-benefits__card:hover,
+.service-benefits__card:focus-within {
+  transform: translateY(-8px);
+  border-color: rgba(123, 187, 39, 0.26);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 32px 50px -34px rgba(0, 0, 0, 0.28);
+}
+
+.service-benefits__card:hover::after,
+.service-benefits__card:focus-within::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.service-benefits__icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: #7bbb27;
+  transition: transform 220ms ease, color 220ms ease;
+}
+
+.service-benefits__card:hover .service-benefits__icon-wrap,
+.service-benefits__card:focus-within .service-benefits__icon-wrap {
+  transform: translateY(-3px) scale(1.05);
+  color: #6cab1f;
+}
+
+.service-benefits__icon {
+  width: 2.35rem;
+  height: 2.35rem;
+}
+
+.service-benefits__card-title {
+  margin: 0;
+  color: #111111;
+  font-size: 1.45rem;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+}
+
+.service-benefits__card-copy {
+  margin-top: 0.9rem;
+  color: rgba(16, 16, 16, 0.66);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  text-wrap: pretty;
+  text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .service-benefits__intro {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .service-benefits__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .service-benefits {
+    padding: 80px 1rem 5rem;
+    background: #ffffff;
+  }
+
+  .service-benefits__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-benefits__card {
+    min-height: auto;
+    padding: 1.5rem 1.2rem;
+  }
+
+  .service-benefits__icon {
+    width: 2.05rem;
+    height: 2.05rem;
+  }
+}

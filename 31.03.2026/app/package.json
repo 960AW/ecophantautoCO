@@ -1,0 +1,14 @@
+{
+  "name": "ecophant-auto",
+  "version": "1.0.0",
+  "description": "Sitio web para Ecophant Auto",
+  "private": true,
+  "scripts": {
+    "build:css": "npx @tailwindcss/cli -i ./styles/tailwind.css -o ./styles/tailwind-output.css --minify",
+    "watch:css": "npx @tailwindcss/cli -i ./styles/tailwind.css -o ./styles/tailwind-output.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  }
+}

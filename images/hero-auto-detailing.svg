@@ -1,0 +1,19 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#070707"/>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <path d="M188 764C380 546 600 420 922 392C1124 374 1286 402 1440 470" stroke="#7BBB27" stroke-width="5" stroke-linecap="round"/>
+  <path d="M162 838C352 654 586 544 872 518C1106 496 1286 528 1450 614" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="2"/>
+  <circle cx="1130" cy="246" r="202" fill="#7BBB27" fill-opacity="0.14"/>
+  <path d="M564 252L1014 746" stroke="#DDE7CB" stroke-opacity="0.22" stroke-width="118"/>
+  <path d="M792 178L1248 658" stroke="#111111" stroke-width="168"/>
+  <rect x="104" y="104" width="250" height="54" fill="#101010" stroke="#33471E"/>
+  <text x="138" y="140" fill="#C9E58C" font-size="22" font-family="Montserrat, Arial, sans-serif" letter-spacing="4">AUTO DETAILING</text>
+  <text x="136" y="848" fill="rgba(255,255,255,0.74)" font-size="32" font-family="Montserrat, Arial, sans-serif" letter-spacing="6">INTERIOR AND EXTERIOR RESTORATION</text>
+  <defs>
+    <linearGradient id="bg" x1="1504" y1="78" x2="174" y2="924" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#191919"/>
+      <stop offset="0.46" stop-color="#0E130C"/>
+      <stop offset="1" stop-color="#060606"/>
+    </linearGradient>
+  </defs>
+</svg>

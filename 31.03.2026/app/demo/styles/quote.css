@@ -1,0 +1,888 @@
+﻿.quote-page--form {
+  background:
+    radial-gradient(circle at 50% 24rem, rgba(138, 201, 38, 0.22), transparent 26%),
+    linear-gradient(180deg, #0b0b0b 0%, #111111 18rem, #eff4e2 18rem, #e6edd5 100%);
+}
+
+.quote-kicker {
+  display: inline-flex;
+  align-items: center;
+  color: #8ac926;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.quote-kicker--soft {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.quote-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.5rem;
+  border: 1px solid transparent;
+  padding: 0.95rem 1.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease, border-color 180ms ease, opacity 180ms ease;
+}
+
+.quote-button:hover,
+.quote-button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.quote-button--brand {
+  background: #4f7c18;
+  color: #111111;
+}
+
+.quote-button--brand:hover,
+.quote-button--brand:focus-visible {
+  background: #659c20;
+}
+
+.quote-button--dark {
+  border-color: #8ac926;
+  background: #111111;
+  color: #ffffff;
+}
+
+.quote-button--dark:hover,
+.quote-button--dark:focus-visible {
+  background: #4f7c18;
+  color: #111111;
+}
+
+.quote-button--muted,
+.quote-button--ghost-dark {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: transparent;
+  color: #ffffff;
+}
+
+.quote-button--muted:hover,
+.quote-button--muted:focus-visible,
+.quote-button--ghost-dark:hover,
+.quote-button--ghost-dark:focus-visible {
+  border-color: #8ac926;
+  color: #8ac926;
+}
+
+.quote-form-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 46rem;
+}
+
+.quote-form-hero__media {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(6, 6, 6, 0.84) 0%, rgba(6, 6, 6, 0.72) 48%, rgba(6, 6, 6, 0.6) 100%),
+    url('/demo/images/inicio/ecophant-bogota.webp') center center / cover no-repeat;
+}
+
+.quote-form-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.62fr);
+  gap: 2rem;
+  align-items: end;
+  width: min(100%, 84rem);
+  margin: 0 auto;
+  padding: 6.75rem 1.5rem 4.25rem;
+}
+
+.quote-form-hero__copy {
+  max-width: 44rem;
+}
+
+.quote-form-hero__title {
+  max-width: 34rem;
+  margin: 1rem 0 0;
+  color: #ffffff;
+  font-size: clamp(2.4rem, 5vw, 4.35rem);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.quote-form-hero__subtitle {
+  max-width: 28rem;
+  margin: 1rem 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.quote-form-hero__lead {
+  max-width: 40rem;
+  margin: 1.25rem 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.quote-form-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.8rem;
+}
+
+.quote-form-hero__panel {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 1.6rem;
+}
+
+.quote-form-hero__panel--inline {
+  align-self: end;
+  max-width: 25rem;
+  margin-left: auto;
+}
+
+.quote-form-hero__panel-title {
+  margin: 0.8rem 0 0;
+  color: #ffffff;
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.14;
+}
+
+.quote-form-hero__panel-list {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.quote-form-hero__panel-list li {
+  position: relative;
+  padding-left: 1.2rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+.quote-form-hero__panel-list li + li {
+  margin-top: 0.8rem;
+}
+
+.quote-form-hero__panel-list li::before {
+  content: '';
+  position: absolute;
+  top: 0.72rem;
+  left: 0;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: #4f7c18;
+}
+
+.quote-wizard-section {
+  padding: 0 0 5.5rem;
+}
+
+.quote-wizard-shell {
+  width: min(100%, 84rem);
+  margin: -3rem auto 0;
+  padding: 0 1.5rem 5rem;
+}
+
+.quote-wizard-card {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.38fr) minmax(0, 0.62fr);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1.5rem;
+  background: #111111;
+  box-shadow: 0 36px 80px -44px rgba(0, 0, 0, 0.52);
+}
+
+.quote-wizard-card__side {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(138, 201, 38, 0.05) 100%);
+  padding: 2rem 1.6rem;
+}
+
+.quote-wizard-card__title {
+  margin: 0.9rem 0 0;
+  color: #ffffff;
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  line-height: 0.96;
+}
+
+.quote-wizard-card__copy {
+  margin: 1rem 0 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.74;
+}
+
+.quote-progress {
+  display: grid;
+  gap: 0.8rem;
+  margin: 1.8rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.quote-progress__item {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0.8rem;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.85rem 0.9rem;
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.quote-progress__item span {
+  color: #8ac926;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.quote-progress__item strong {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.quote-progress__item.is-active {
+  border-color: rgba(138, 201, 38, 0.72);
+  background: #4f7c18;
+  color: #111111;
+}
+
+.quote-progress__item.is-active span,
+.quote-progress__item.is-active strong {
+  color: #111111;
+}
+
+.quote-form {
+  padding: 2rem 1.7rem;
+}
+
+.quote-form__status {
+  min-height: 1.4rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+}
+
+.quote-form__status.is-error {
+  color: #ffb4b4;
+}
+
+.quote-form__status.is-success {
+  color: #a7e352;
+}
+
+.quote-step-panel__head {
+  margin-bottom: 1.4rem;
+}
+
+.quote-step-panel__count {
+  display: inline-flex;
+  color: #8ac926;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.quote-step-panel__title {
+  margin: 0.7rem 0 0;
+  color: #ffffff;
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.quote-step-panel__hint {
+  margin: 1rem 0 0;
+  color: rgba(255, 255, 255, 0.54);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.quote-form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.quote-form-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.quote-form-grid--four {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.quote-field {
+  display: block;
+}
+
+.quote-field__input {
+  width: 100%;
+  border: 1px solid rgba(138, 201, 38, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.05rem 1rem;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.quote-field__input::placeholder {
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.quote-field__input:focus {
+  outline: none;
+  border-color: #8ac926;
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.quote-field__input--textarea {
+  resize: vertical;
+  min-height: 11rem;
+}
+
+.quote-service-choices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.quote-check {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.quote-check input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: #8ac926;
+}
+
+.quote-review {
+  margin-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1rem;
+}
+
+.quote-review__title {
+  display: block;
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.quote-review__copy {
+  margin: 0.5rem 0 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.quote-form__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.9rem;
+  margin-top: 1.8rem;
+}
+
+.quote-form__actions .quote-button {
+  min-width: 11rem;
+}
+
+@media (max-width: 1023px) {
+  .quote-form-hero__inner,
+  .quote-wizard-card {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-wizard-card__side {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .quote-form-grid--four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .quote-form-hero {
+    min-height: auto;
+  }
+
+  .quote-form-hero__media {
+    background:
+      linear-gradient(180deg, rgba(6, 6, 6, 0.82) 0%, rgba(6, 6, 6, 0.68) 100%),
+      url('/demo/images/inicio/ecophant-bogota.webp') center center / cover no-repeat;
+  }
+
+  .quote-form-hero__inner,
+  .quote-wizard-shell {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .quote-form-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+    align-items: start;
+    padding: 5.5rem 1rem 3rem;
+  }
+
+  .quote-form-hero__title {
+    max-width: 18rem;
+    font-size: clamp(2.15rem, 11vw, 3.4rem);
+  }
+
+  .quote-form-hero__subtitle {
+    max-width: 22rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .quote-form-hero__panel--inline {
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .quote-form-hero__actions,
+  .quote-form__actions {
+    display: grid;
+  }
+
+  .quote-form-grid--two,
+  .quote-form-grid--four,
+  .quote-service-choices {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-wizard-shell {
+    margin-top: -2rem;
+    padding-bottom: 4rem;
+  }
+
+  .quote-form,
+  .quote-wizard-card__side {
+    padding: 1.35rem 1rem;
+  }
+
+  .quote-form__actions .quote-button,
+  .quote-form-hero__actions .quote-button {
+    width: 100%;
+  }
+}
+
+.quote-modal-open {
+  overflow: hidden;
+}
+
+.quote-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 240;
+}
+
+.quote-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 6, 6, 0.74);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.quote-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 84rem);
+  max-height: calc(100vh - 3rem);
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.quote-modal.is-visible .quote-modal__backdrop,
+.quote-modal.is-visible .quote-modal__dialog {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quote-modal .quote-wizard-card {
+  max-height: calc(100vh - 3rem);
+}
+
+.quote-modal .quote-form,
+.quote-modal .quote-wizard-card__side {
+  overflow: auto;
+  max-height: calc(100vh - 3rem);
+}
+
+.quote-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.86);
+  color: #ffffff;
+}
+
+.quote-modal__close svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (max-width: 767px) {
+  .quote-modal__dialog {
+    max-height: calc(100vh - 1rem);
+    margin: 0.5rem auto;
+    padding: 0 0.5rem;
+  }
+
+  .quote-modal .quote-wizard-card,
+  .quote-modal .quote-form,
+  .quote-modal .quote-wizard-card__side {
+    max-height: calc(100vh - 1rem);
+  }
+
+  .quote-modal__close {
+    top: 0.9rem;
+    right: 1.1rem;
+  }
+}
+
+
+.quote-field__input,
+.quote-field__input::-webkit-input-placeholder,
+.quote-field__input::-moz-placeholder,
+.quote-field__input:-ms-input-placeholder,
+.quote-field__input::placeholder {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+@media (max-width: 767px) {
+  .quote-modal__dialog {
+    margin: 0.25rem auto;
+    padding: 0 0.25rem;
+    max-height: calc(100vh - 0.5rem);
+  }
+
+  .quote-modal .quote-wizard-card {
+    grid-template-columns: 1fr;
+    max-height: calc(100vh - 0.5rem);
+    border-radius: 1rem;
+  }
+
+  .quote-modal .quote-wizard-card__side {
+    padding: 0.85rem 0.9rem 0.7rem;
+  }
+
+  .quote-modal .quote-wizard-card__title,
+  .quote-modal .quote-wizard-card__copy {
+    display: none;
+  }
+
+  .quote-modal .quote-progress {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.45rem;
+    margin-top: 0.8rem;
+  }
+
+  .quote-modal .quote-progress__item {
+    grid-template-columns: 1fr;
+    gap: 0.18rem;
+    justify-items: center;
+    padding: 0.5rem 0.35rem;
+  }
+
+  .quote-modal .quote-progress__item strong {
+    font-size: 0.72rem;
+    text-align: center;
+    line-height: 1.15;
+  }
+
+  .quote-modal .quote-form {
+    padding: 0.9rem 0.9rem 1rem;
+    max-height: calc(100vh - 8.8rem);
+  }
+
+  .quote-modal .quote-form__status {
+    min-height: 1rem;
+    margin-bottom: 0.55rem;
+    font-size: 0.8rem;
+  }
+
+  .quote-modal .quote-step-panel__head {
+    margin-bottom: 0.8rem;
+  }
+
+  .quote-modal .quote-step-panel__title {
+    font-size: 2rem;
+  }
+
+  .quote-modal .quote-form-grid,
+  .quote-modal .quote-service-choices {
+    gap: 0.7rem;
+  }
+
+  .quote-modal .quote-field__input {
+    padding: 0.88rem 0.9rem;
+    font-size: 0.96rem;
+  }
+
+  .quote-modal .quote-field__input--textarea {
+    min-height: 8rem;
+  }
+
+  .quote-modal .quote-step-panel__hint,
+  .quote-modal .quote-review {
+    margin-top: 0.75rem;
+  }
+
+  .quote-modal .quote-review__copy {
+    font-size: 0.84rem;
+    line-height: 1.55;
+  }
+
+  .quote-modal .quote-form__actions {
+    margin-top: 0.9rem;
+    gap: 0.6rem;
+  }
+
+  .quote-modal .quote-form__actions .quote-button {
+    min-height: 3.1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .quote-modal .quote-kicker {
+    font-size: 0.68rem;
+  }
+
+  .quote-modal .quote-step-panel__count {
+    font-size: 0.68rem;
+  }
+
+  .quote-modal .quote-step-panel__title {
+    font-size: 1.7rem;
+    line-height: 1.02;
+  }
+
+  .quote-modal .quote-field__input {
+    min-height: 3.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .quote-modal .quote-form-grid {
+    gap: 0.95rem;
+  }
+
+  .quote-modal .quote-form__actions {
+    margin-top: 1.2rem;
+  }
+}
+
+.quote-field select.quote-field__input {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.72) 50%), linear-gradient(135deg, rgba(255,255,255,0.72) 50%, transparent 50%);
+  background-position: calc(100% - 1.1rem) calc(50% - 0.1rem), calc(100% - 0.8rem) calc(50% - 0.1rem);
+  background-size: 0.35rem 0.35rem, 0.35rem 0.35rem;
+  background-repeat: no-repeat;
+}
+
+.quote-field select.quote-field__input:invalid {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.quote-field select.quote-field__input {
+  color: #ffffff;
+}
+
+.quote-field select.quote-field__input option {
+  color: #111111;
+  background: #ffffff;
+}
+
+.quote-field select.quote-field__input option[disabled] {
+  color: #666666;
+}
+
+.quote-kicker--banner {
+  padding: 0.75rem 1rem;
+  background: #4f7c18;
+  color: #111111;
+  font-size: 0.92rem;
+  letter-spacing: 0.18em;
+}
+
+.quote-form-grid--attachments {
+  margin-top: 0.35rem;
+}
+
+.quote-field__input--file {
+  padding: 0.85rem 0.9rem;
+}
+
+.quote-field__input--file::file-selector-button {
+  margin-right: 0.9rem;
+  border: 0;
+  background: #4f7c18;
+  padding: 0.7rem 0.9rem;
+  color: #111111;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.quote-form-hero__panel--inline {
+  max-width: 34rem;
+  padding: 1.2rem 1.25rem;
+}
+
+.quote-form-hero__panel--inline .quote-form-hero__panel-title {
+  font-size: 1.2rem;
+}
+
+.quote-form-hero__panel--inline .quote-form-hero__panel-list li {
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+
+
+
+
+
+
+
+.quote-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
+  filter: blur(0.6px) saturate(0.72);
+  transform: none;
+  box-shadow: none;
+}
+
+.quote-button:disabled:hover,
+.quote-button:disabled:focus-visible {
+  transform: none;
+}
+
+.quote-button--dark:disabled,
+.quote-button--brand:disabled {
+  border-color: rgba(138, 201, 38, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.56);
+}
+
+
+
+.quote-step-section + .quote-step-section {
+  margin-top: 1.4rem;
+}
+
+.quote-step-section__title {
+  margin: 0 0 0.9rem;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.quote-step-section--comments .quote-field__input--textarea {
+  margin-top: 0;
+}
+
+.quote-step-divider {
+  height: 1px;
+  margin: 1.35rem 0 1.4rem;
+  border: 0;
+  background: linear-gradient(90deg, rgba(138, 201, 38, 0) 0%, rgba(138, 201, 38, 0.2) 18%, rgba(138, 201, 38, 0.55) 50%, rgba(138, 201, 38, 0.2) 82%, rgba(138, 201, 38, 0) 100%);
+}
+
+.quote-step-panel__title {
+  font-size: clamp(1.55rem, 2.4vw, 2.15rem);
+  line-height: 1.02;
+}
+
+.quote-step-section__title {
+  font-size: 0.88rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.quote-step-section--contact .quote-form-grid,
+.quote-step-section--vehicle .quote-form-grid {
+  margin-top: 0.75rem;
+}
+
+.quote-step-divider-wrap {
+  margin: 0.35rem 0 0.2rem;
+}
+
+@media (max-width: 767px) {
+  .quote-step-panel__title {
+    font-size: 1.45rem;
+  }
+}
+
+.quote-button--brand-mid {
+  background: #8fcf2d;
+  color: #111111;
+}
+
+.quote-button--brand-mid:hover,
+.quote-button--brand-mid:focus-visible {
+  background: #a6df47;
+}
+
+.quote-button--brand-soft {
+  background: #d7f1a0;
+  color: #111111;
+}
+
+.quote-button--brand-soft:hover,
+.quote-button--brand-soft:focus-visible {
+  background: #e4f7bd;
+}
+
+
+
+
+
+

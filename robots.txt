@@ -1,0 +1,5 @@
+﻿User-agent: *
+Allow: /
+Disallow: /demo/
+
+Sitemap: https://www.ecophantauto.com.co/sitemap.xml

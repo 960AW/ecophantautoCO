@@ -1,0 +1,24 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#050505"/>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <path d="M246 745C420 520 640 374 944 334C1126 310 1268 333 1422 405" stroke="#7BBB27" stroke-width="5" stroke-linecap="round"/>
+  <path d="M185 796C372 628 565 538 820 506C1082 474 1268 520 1438 626" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="2"/>
+  <path d="M342 718C486 572 644 473 850 432C1044 393 1202 410 1348 486" fill="url(#wrap)" fill-opacity="0.68"/>
+  <path d="M520 252L1020 720" stroke="#C9E58C" stroke-opacity="0.18" stroke-width="148"/>
+  <path d="M864 170L1328 606" stroke="#1A1A1A" stroke-width="198"/>
+  <rect x="108" y="108" width="166" height="54" rx="0" fill="#101010" stroke="#445924"/>
+  <text x="140" y="144" fill="#C9E58C" font-size="22" font-family="Montserrat, Arial, sans-serif" letter-spacing="4">WRAP</text>
+  <text x="138" y="835" fill="rgba(255,255,255,0.74)" font-size="32" font-family="Montserrat, Arial, sans-serif" letter-spacing="6">COLOR TRANSFORMATION AND STYLE</text>
+  <defs>
+    <linearGradient id="bg" x1="1514" y1="76" x2="174" y2="932" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111111"/>
+      <stop offset="0.44" stop-color="#0A0A0A"/>
+      <stop offset="1" stop-color="#050505"/>
+    </linearGradient>
+    <linearGradient id="wrap" x1="342" y1="432" x2="1348" y2="718" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A2B0B"/>
+      <stop offset="0.54" stop-color="#7BBB27"/>
+      <stop offset="1" stop-color="#151515"/>
+    </linearGradient>
+  </defs>
+</svg>

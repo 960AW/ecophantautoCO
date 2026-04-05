@@ -1,0 +1,1279 @@
+﻿.blog-section {
+  padding: 6.5rem 1.5rem;
+  background:
+    radial-gradient(circle at top right, rgba(123, 187, 39, 0.08), transparent 24%),
+    linear-gradient(180deg, #f3f4ee 0%, #eceee5 100%);
+}
+
+.blog-section__inner {
+  width: min(100%, 80rem);
+  margin: 0 auto;
+}
+
+.blog-section__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: 2.2rem;
+}
+
+.blog-section__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 1.15rem;
+  border: 1px solid rgba(16, 16, 16, 0.1);
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0.78rem 0.95rem;
+  color: rgba(16, 16, 16, 0.58);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.blog-section__title {
+  margin: 0;
+  color: #111111;
+  font-size: clamp(2.8rem, 4.8vw, 5rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.blog-section__intro-copy {
+  max-width: 40rem;
+  color: rgba(16, 16, 16, 0.7);
+  font-size: 1.02rem;
+  line-height: 1.9;
+  text-wrap: pretty;
+}
+
+.blog-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.blog-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 28rem;
+  border: 1px solid rgba(16, 16, 16, 0.08);
+  background: #111111;
+  box-shadow: 0 24px 54px -36px rgba(0, 0, 0, 0.24);
+}
+
+.blog-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.62) 58%, rgba(0, 0, 0, 0.9) 100%);
+  pointer-events: none;
+}
+
+.blog-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.blog-card:hover .blog-card__image,
+.blog-card:focus-within .blog-card__image {
+  transform: scale(1.04);
+}
+
+.blog-card__content {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding: 1.9rem;
+}
+
+.blog-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.blog-card__views {
+  display: inline-flex;
+  align-items: center;
+}
+
+.blog-card__title {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 2.8vw, 2.8rem);
+  font-weight: 500;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.blog-card__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.35rem;
+  border: 1px solid rgba(123, 187, 39, 0.9);
+  padding: 0.9rem 1.35rem;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.blog-card__cta:hover,
+.blog-card__cta:focus-visible {
+  transform: translateY(-2px);
+  background: #7bbb27;
+  color: #111111;
+}
+
+.blog-section__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.8rem;
+}
+
+.blog-section__footer-copy {
+  color: rgba(16, 16, 16, 0.58);
+  font-size: 0.84rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.blog-section__footer-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #7bbb27;
+  background: #111111;
+  padding: 1rem 1.45rem;
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.blog-section__footer-link:hover,
+.blog-section__footer-link:focus-visible {
+  transform: translateY(-2px);
+  background: #7bbb27;
+  color: #111111;
+}
+
+.blog-listing {
+  padding: 5rem 1.5rem 6rem;
+  background:
+    radial-gradient(circle at top left, rgba(123, 187, 39, 0.08), transparent 24%),
+    linear-gradient(180deg, #f6f7f1 0%, #eceee6 100%);
+}
+
+.blog-listing__inner {
+  width: min(100%, 80rem);
+  margin: 0 auto;
+}
+
+.blog-article {
+  padding: 5rem 1.5rem 6rem;
+  background:
+    radial-gradient(circle at top right, rgba(123, 187, 39, 0.08), transparent 26%),
+    linear-gradient(180deg, #f6f7f1 0%, #eceee6 100%);
+}
+
+.blog-article__inner {
+  width: min(100%, 72rem);
+  margin: 0 auto;
+}
+
+.blog-article__hero {
+  overflow: hidden;
+  min-height: 28rem;
+  margin-top: 2rem;
+  border: 1px solid rgba(16, 16, 16, 0.08);
+  background: #111111;
+  box-shadow: 0 24px 54px -36px rgba(0, 0, 0, 0.24);
+}
+
+.blog-article__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-article__meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  color: rgba(16, 16, 16, 0.52);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.blog-article__title {
+  margin: 1.1rem 0 0;
+  color: #111111;
+  font-size: clamp(3rem, 6vw, 5.3rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.blog-article__lead,
+.blog-article__body {
+  max-width: 52rem;
+  color: rgba(16, 16, 16, 0.72);
+  font-size: 1.04rem;
+  line-height: 1.95;
+  text-wrap: pretty;
+}
+
+.blog-article__lead {
+  margin-top: 1.5rem;
+}
+
+.blog-article__body {
+  margin-top: 1rem;
+}
+
+.blog-article__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  border: 1px solid #7bbb27;
+  background: #111111;
+  padding: 1rem 1.55rem;
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.blog-article__cta:hover,
+.blog-article__cta:focus-visible {
+  transform: translateY(-2px);
+  background: #7bbb27;
+  color: #111111;
+}
+
+@media (max-width: 1023px) {
+  .blog-section,
+  .blog-listing,
+  .blog-article {
+    padding: 5rem 1.5rem;
+  }
+
+  .blog-section__intro {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-compare-copy__title {
+    margin-bottom: 1.1rem;
+    line-height: 1;
+  }
+
+  .blog-section__intro {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-section__title {
+    font-size: clamp(2.35rem, 10vw, 3.7rem);
+  }
+
+  .blog-section__intro-copy {
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+
+  .blog-section__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-card {
+    min-height: 24rem;
+  }
+
+  .blog-card__content {
+    padding: 1.35rem;
+  }
+
+  .blog-card__meta {
+    justify-content: flex-start;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .blog-card__title {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+  .blog-card__cta {
+    width: 100%;
+  }
+
+  .blog-section__footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.9rem;
+  }
+
+  .blog-section__footer-copy {
+    font-size: 0.76rem;
+    line-height: 1.6;
+  }
+
+  .blog-section__footer-link {
+    width: 100%;
+  }
+}
+
+
+
+/* Restored article layout: PPF vs Ceramic */
+.blog-article.blog-article--ppf-vs-ceramic {
+  padding-top: 1.75rem;
+}
+
+
+.blog-article--ppf-vs-ceramic {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.blog-article--ppf-vs-ceramic .blog-section__eyebrow,
+.blog-article--ppf-vs-ceramic .blog-compare-panel__kicker,
+.blog-article--ppf-vs-ceramic .blog-split-compare__kicker,
+.blog-article--ppf-vs-ceramic .blog-coverage-card__tag,
+.blog-article--ppf-vs-ceramic .blog-answer__eyebrow,
+.blog-article--ppf-vs-ceramic .blog-quote-band__eyebrow,
+.blog-article--ppf-vs-ceramic .blog-risk-map__eyebrow,
+.blog-article--ppf-vs-ceramic .blog-article-cta__eyebrow,
+.blog-article--ppf-vs-ceramic .blog-compare-block__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 46rem;
+  margin-top: 2rem;
+  border: 1px solid rgba(16, 16, 16, 0.08);
+  background: #060606;
+  box-shadow: 0 36px 80px -48px rgba(0, 0, 0, 0.45);
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-hero__media {
+  position: absolute;
+  inset: -8% 0 -12%;
+  background:
+    linear-gradient(90deg, rgba(6, 6, 6, 0.78) 0%, rgba(6, 6, 6, 0.64) 42%, rgba(6, 6, 6, 0.5) 100%),
+    url('/demo/images/blog/bgheader.webp') center center / cover no-repeat;
+  transform: translate3d(0, -30px, 0) scale(1.16);
+  will-change: transform;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(22rem, 0.72fr);
+  gap: 2.25rem;
+  align-items: end;
+  min-height: 46rem;
+  padding: 6rem clamp(1.5rem, 3vw, 3.25rem) 5rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-hero__intro {
+  max-width: 44rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-hero__title {
+  margin: 1rem 0 1.35rem;
+  color: #ffffff;
+  font-size: clamp(3.4rem, 7vw, 6.4rem);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-hero__lead,
+.blog-article--ppf-vs-ceramic .blog-compare-hero__summary-copy,
+.blog-article--ppf-vs-ceramic .blog-compare-hero__stat-copy {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.02rem;
+  line-height: 1.82;
+  text-wrap: pretty;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-hero__summary {
+  align-self: end;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(10, 10, 10, 0.46);
+  backdrop-filter: blur(10px);
+  padding: 1.6rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-hero__stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-hero__stat {
+  border-top: 1px solid rgba(123, 187, 39, 0.4);
+  padding-top: 0.95rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-hero__stat-label {
+  display: block;
+  margin-bottom: 0.42rem;
+  color: #8ac926;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-hero__stat-value {
+  display: block;
+  color: #ffffff;
+  font-size: 1.55rem;
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-block,
+.blog-article--ppf-vs-ceramic .blog-compare-copy,
+.blog-article--ppf-vs-ceramic .blog-risk-map,
+.blog-article--ppf-vs-ceramic .blog-answer,
+.blog-article--ppf-vs-ceramic .blog-coverage,
+.blog-article--ppf-vs-ceramic .blog-quote-band {
+  padding: 5.5rem 1.5rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-block--dark {
+  background:
+    radial-gradient(circle at top right, rgba(123, 187, 39, 0.12), transparent 28%),
+    linear-gradient(180deg, #f1f3e9 0%, #edf0e4 100%);
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-block--graphite {
+  background:
+    linear-gradient(180deg, #121212 0%, #171717 100%);
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-block__inner,
+.blog-article--ppf-vs-ceramic .blog-compare-copy__inner,
+.blog-article--ppf-vs-ceramic .blog-risk-map__inner,
+.blog-article--ppf-vs-ceramic .blog-answer__inner,
+.blog-article--ppf-vs-ceramic .blog-coverage__inner,
+.blog-article--ppf-vs-ceramic .blog-quote-band__inner,
+.blog-article--ppf-vs-ceramic .blog-article-cta__inner {
+  width: min(100%, 94rem);
+  margin: 0 auto;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-block__eyebrow-wrap {
+  max-width: 54rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-block__eyebrow,
+.blog-article--ppf-vs-ceramic .blog-risk-map__eyebrow,
+.blog-article--ppf-vs-ceramic .blog-answer__eyebrow,
+.blog-article--ppf-vs-ceramic .blog-coverage__eyebrow,
+.blog-article--ppf-vs-ceramic .blog-quote-band__eyebrow,
+.blog-article--ppf-vs-ceramic .blog-article-cta__eyebrow {
+  color: #8ac926;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-block__title,
+.blog-article--ppf-vs-ceramic .blog-compare-copy__title,
+.blog-article--ppf-vs-ceramic .blog-risk-map__title,
+.blog-article--ppf-vs-ceramic .blog-answer__title,
+.blog-article--ppf-vs-ceramic .blog-coverage__title,
+.blog-article--ppf-vs-ceramic .blog-quote-band__title,
+.blog-article--ppf-vs-ceramic .blog-article-cta__title {
+  margin: 0.9rem 0 0;
+  color: #111111;
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-panel__label {
+  padding-top: 0.5rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-panel__kicker {
+  color: #8ac926;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-panel__title {
+  margin: 1rem 0 0;
+  color: #111111;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 0.98;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-block--graphite .blog-compare-panel__title {
+  color: #ffffff;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-panel__card {
+  border: 1px solid rgba(123, 187, 39, 0.16);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 1.6rem 1.7rem;
+  box-shadow: 0 22px 48px -38px rgba(0, 0, 0, 0.3);
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-block--graphite .blog-compare-panel__card {
+  border-color: rgba(123, 187, 39, 0.24);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-list li {
+  position: relative;
+  padding-left: 1.4rem;
+  color: rgba(17, 17, 17, 0.84);
+  font-size: 1.02rem;
+  line-height: 1.82;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-list li + li {
+  margin-top: 1rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-list li::before {
+  content: '';
+  position: absolute;
+  top: 0.72rem;
+  left: 0;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: #8ac926;
+  box-shadow: 0 0 0 3px rgba(138, 201, 38, 0.16);
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-block--graphite .blog-compare-list li {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-copy {
+  background:
+    radial-gradient(circle at left center, rgba(123, 187, 39, 0.08), transparent 24%),
+    linear-gradient(180deg, #f5f6ef 0%, #f0f2e7 100%);
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-copy__inner {
+  max-width: 54rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-copy__body,
+.blog-article--ppf-vs-ceramic .blog-answer__copy,
+.blog-article--ppf-vs-ceramic .blog-coverage-card__body,
+.blog-article--ppf-vs-ceramic .blog-quote-band__point p,
+.blog-article--ppf-vs-ceramic .blog-article-cta__copy {
+  color: rgba(17, 17, 17, 0.82);
+  font-size: 1.05rem;
+  line-height: 1.84;
+  text-wrap: pretty;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-copy__body {
+  margin: 0;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-copy__body + .blog-compare-copy__body {
+  margin-top: 1rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-risk-map--split {
+  background: #0d0d0d;
+}
+
+.blog-article--ppf-vs-ceramic .blog-risk-map__intro {
+  max-width: 48rem;
+  margin-bottom: 2rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-risk-map__title {
+  color: #ffffff;
+}
+
+.blog-article--ppf-vs-ceramic .blog-split-compare {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.72fr) minmax(0, 1fr);
+  gap: 1.2rem;
+  align-items: stretch;
+}
+
+.blog-article--ppf-vs-ceramic .blog-split-compare__panel {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 1.6rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-split-compare__mobile-media {
+  display: none;
+}
+
+.blog-article--ppf-vs-ceramic .blog-split-compare__kicker {
+  color: #8ac926;
+}
+
+.blog-article--ppf-vs-ceramic .blog-split-compare__title {
+  margin: 0.9rem 0 1.3rem;
+  color: #ffffff;
+  font-size: clamp(2rem, 3.1vw, 3rem);
+  line-height: 0.98;
+}
+
+.blog-article--ppf-vs-ceramic .blog-split-compare__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.blog-article--ppf-vs-ceramic .blog-split-compare__item + .blog-split-compare__item {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.blog-article--ppf-vs-ceramic .blog-split-compare__item-title {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.blog-article--ppf-vs-ceramic .blog-split-compare__item p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.blog-article--ppf-vs-ceramic .blog-split-compare__media {
+  overflow: hidden;
+  min-height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.blog-article--ppf-vs-ceramic .blog-split-compare__image {
+  width: 100%;
+  height: 100%;
+  min-height: 44rem;
+  background:
+    linear-gradient(180deg, rgba(6, 6, 6, 0.08), rgba(6, 6, 6, 0.3)),
+    url('/demo/images/blog/ppf-vs-ceramico.webp') center center / cover no-repeat;
+}
+
+.blog-article--ppf-vs-ceramic .blog-answer {
+  background:
+    linear-gradient(180deg, #f5f6ef 0%, #eef1e5 100%);
+}
+
+.blog-article--ppf-vs-ceramic .blog-answer__intro {
+  max-width: 50rem;
+  margin-bottom: 2rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-answer__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 1.4rem;
+  align-items: stretch;
+}
+
+.blog-article--ppf-vs-ceramic .blog-answer__media {
+  overflow: hidden;
+  min-height: 34rem;
+  border: 1px solid rgba(16, 16, 16, 0.08);
+}
+
+.blog-article--ppf-vs-ceramic .blog-answer__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-article--ppf-vs-ceramic .blog-answer__steps {
+  display: grid;
+  gap: 1rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-answer-step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  border: 1px solid rgba(16, 16, 16, 0.08);
+  background: rgba(255, 255, 255, 0.75);
+  padding: 1.3rem 1.35rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-answer-step__number {
+  color: #8ac926;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.blog-article--ppf-vs-ceramic .blog-answer-step__title {
+  margin: 0 0 0.4rem;
+  color: #111111;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.blog-article--ppf-vs-ceramic .blog-answer-step__copy {
+  margin: 0;
+  color: rgba(17, 17, 17, 0.74);
+  font-size: 0.96rem;
+  line-height: 1.72;
+}
+
+.blog-article--ppf-vs-ceramic .blog-coverage {
+  background:
+    radial-gradient(circle at right top, rgba(123, 187, 39, 0.08), transparent 24%),
+    linear-gradient(180deg, #f6f7f1 0%, #edf0e5 100%);
+}
+
+.blog-article--ppf-vs-ceramic .blog-coverage__intro {
+  max-width: 48rem;
+  margin-bottom: 2rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-coverage-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 1.4rem;
+  align-items: stretch;
+  border: 1px solid rgba(16, 16, 16, 0.08);
+  background: rgba(255, 255, 255, 0.76);
+  padding: 1.35rem;
+  box-shadow: 0 22px 48px -40px rgba(0, 0, 0, 0.28);
+}
+
+.blog-article--ppf-vs-ceramic .blog-coverage-card + .blog-coverage-card {
+  margin-top: 1.35rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-coverage-card--reverse {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+}
+
+.blog-article--ppf-vs-ceramic .blog-coverage-card--reverse .blog-coverage-card__copy {
+  order: 2;
+}
+
+.blog-article--ppf-vs-ceramic .blog-coverage-card--reverse .blog-coverage-card__gallery {
+  order: 1;
+}
+
+.blog-article--ppf-vs-ceramic .blog-coverage-card__title {
+  margin: 0.85rem 0 0.9rem;
+  color: #111111;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  line-height: 0.98;
+}
+
+.blog-article--ppf-vs-ceramic .blog-coverage-card__gallery {
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: 0.9rem;
+  min-height: 24rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-coverage-card__gallery .blog-coverage-card__image:first-child {
+  height: 100%;
+}
+
+.blog-article--ppf-vs-ceramic .blog-coverage-card__gallery .blog-coverage-card__image:last-child {
+  height: 84%;
+  align-self: end;
+}
+
+.blog-article--ppf-vs-ceramic .blog-coverage-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid rgba(16, 16, 16, 0.08);
+}
+
+.blog-article--ppf-vs-ceramic .blog-quote-band {
+  background: #8ac926;
+}
+
+.blog-article--ppf-vs-ceramic .blog-quote-band__eyebrow {
+  color: #111111;
+}
+
+.blog-article--ppf-vs-ceramic .blog-quote-band__title {
+  max-width: 54rem;
+  color: #111111;
+  font-size: clamp(2.35rem, 4.1vw, 4rem);
+}
+
+.blog-article--ppf-vs-ceramic .blog-quote-band__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-quote-band__point {
+  border-top: 1px solid rgba(17, 17, 17, 0.18);
+  padding-top: 1rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-quote-band__point-title {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: #111111;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.blog-article--ppf-vs-ceramic .blog-article-cta {
+  position: relative;
+  overflow: hidden;
+  min-height: 36rem;
+  background: #060606;
+}
+
+.blog-article--ppf-vs-ceramic .blog-article-cta__media,
+.blog-article--ppf-vs-ceramic .blog-article-cta__overlay,
+.blog-article--ppf-vs-ceramic .blog-article-cta__inner {
+  position: absolute;
+  inset: 0;
+}
+
+.blog-article--ppf-vs-ceramic .blog-article-cta__image {
+  width: 100%;
+  height: calc(100% + 7rem);
+  object-fit: cover;
+  object-position: center 36%;
+  transform: translate3d(0, -46px, 0) scale(1.14);
+  will-change: transform;
+}
+
+.blog-article--ppf-vs-ceramic .blog-article-cta__overlay {
+  background: linear-gradient(90deg, rgba(6, 6, 6, 0.74) 0%, rgba(6, 6, 6, 0.6) 46%, rgba(6, 6, 6, 0.44) 100%);
+}
+
+.blog-article--ppf-vs-ceramic .blog-article-cta__inner {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-article-cta__title,
+.blog-article--ppf-vs-ceramic .blog-article-cta__copy {
+  max-width: 44rem;
+  color: #ffffff;
+}
+
+.blog-article--ppf-vs-ceramic .blog-article__cta {
+  align-self: flex-start;
+}
+
+@media (max-width: 1023px) {
+  .blog-article--ppf-vs-ceramic .blog-compare-hero__inner,
+  .blog-article--ppf-vs-ceramic .blog-compare-panel,
+  .blog-article--ppf-vs-ceramic .blog-split-compare,
+  .blog-article--ppf-vs-ceramic .blog-answer__layout,
+  .blog-article--ppf-vs-ceramic .blog-coverage-card,
+  .blog-article--ppf-vs-ceramic .blog-coverage-card--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-split-compare__media {
+    order: -1;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-split-compare__image {
+    min-height: 22rem;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-quote-band__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-coverage-card--reverse .blog-coverage-card__copy,
+  .blog-article--ppf-vs-ceramic .blog-coverage-card--reverse .blog-coverage-card__gallery {
+    order: initial;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-article--ppf-vs-ceramic .blog-compare-block,
+  .blog-article--ppf-vs-ceramic .blog-compare-copy,
+  .blog-article--ppf-vs-ceramic .blog-risk-map,
+  .blog-article--ppf-vs-ceramic .blog-answer,
+  .blog-article--ppf-vs-ceramic .blog-coverage,
+  .blog-article--ppf-vs-ceramic .blog-quote-band {
+    padding: 4rem 1rem;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-compare-hero {
+    min-height: auto;
+    margin-top: 1rem;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-compare-hero__media {
+    inset: -4% 0 -6%;
+    background:
+      linear-gradient(90deg, rgba(6, 6, 6, 0.54) 0%, rgba(6, 6, 6, 0.54) 42%, rgba(6, 6, 6, 0.46) 100%),
+      url('/demo/images/blog/bgheader.webp') center center / cover no-repeat;
+    transform: translate3d(0, -16px, 0) scale(1.1);
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-compare-hero__inner {
+    min-height: auto;
+    gap: 1.5rem;
+    padding: 4.3rem 1rem 1.35rem;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-compare-hero__title {
+    font-size: clamp(2.7rem, 12vw, 4.2rem);
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-compare-hero__lead,
+  .blog-article--ppf-vs-ceramic .blog-compare-hero__summary-copy,
+  .blog-article--ppf-vs-ceramic .blog-compare-hero__stat-copy,
+  .blog-article--ppf-vs-ceramic .blog-compare-copy__body,
+  .blog-article--ppf-vs-ceramic .blog-answer__copy,
+  .blog-article--ppf-vs-ceramic .blog-coverage-card__body,
+  .blog-article--ppf-vs-ceramic .blog-quote-band__point p,
+  .blog-article--ppf-vs-ceramic .blog-article-cta__copy {
+    font-size: 0.97rem;
+    line-height: 1.74;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-compare-hero__summary {
+    padding: 1.15rem;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-compare-hero__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-compare-block__eyebrow-wrap,
+  .blog-article--ppf-vs-ceramic .blog-risk-map__intro,
+  .blog-article--ppf-vs-ceramic .blog-answer__intro,
+  .blog-article--ppf-vs-ceramic .blog-coverage__intro {
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-compare-block__eyebrow-wrap {
+    text-align: left;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-compare-block__title,
+  .blog-article--ppf-vs-ceramic .blog-compare-copy__title,
+  .blog-article--ppf-vs-ceramic .blog-risk-map__title,
+  .blog-article--ppf-vs-ceramic .blog-answer__title,
+  .blog-article--ppf-vs-ceramic .blog-coverage__title,
+  .blog-article--ppf-vs-ceramic .blog-quote-band__title,
+  .blog-article--ppf-vs-ceramic .blog-article-cta__title {
+    font-size: clamp(2.15rem, 10vw, 3.3rem);
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-compare-copy__title {
+    margin-bottom: 1.1rem;
+    line-height: 1;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-compare-panel__card,
+  .blog-article--ppf-vs-ceramic .blog-split-compare__panel,
+  .blog-article--ppf-vs-ceramic .blog-answer-step,
+  .blog-article--ppf-vs-ceramic .blog-coverage-card {
+    padding: 1.05rem;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-split-compare__media {
+    display: none;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-split-compare__mobile-media {
+    display: block;
+    min-height: 12rem;
+    margin-bottom: 1rem;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-split-compare__mobile-media--ppf {
+    background-image: url('/demo/images/blog/ppf-vs-ceramico.webp');
+    background-position: left center;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-split-compare__mobile-media--ceramic {
+    background-image: url('/demo/images/blog/ppf-vs-ceramico.webp');
+    background-position: right center;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-answer__media {
+    min-height: 18rem;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-coverage-card__gallery {
+    grid-template-columns: 1fr 1fr;
+    min-height: auto;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-coverage-card__gallery .blog-coverage-card__image:first-child,
+  .blog-article--ppf-vs-ceramic .blog-coverage-card__gallery .blog-coverage-card__image:last-child {
+    height: 11.5rem;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-quote-band__title {
+    font-size: clamp(2rem, 8.6vw, 3.2rem);
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-article-cta {
+    min-height: 32rem;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-article-cta__image {
+    height: calc(100% + 4rem);
+    object-position: center 34%;
+    transform: translate3d(0, -18px, 0) scale(1.1);
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-article-cta__inner {
+    padding: 3.5rem 1rem;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-article__cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+
+
+
+.blog-article--ppf-vs-ceramic .blog-compare-copy__title,
+.blog-article--ppf-vs-ceramic .blog-answer__title,
+.blog-article--ppf-vs-ceramic .blog-coverage__title,
+.blog-article--ppf-vs-ceramic .blog-article-cta__title {
+  margin-bottom: 1.15rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-quote-band__title {
+  margin-bottom: 1.4rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-panel__title,
+.blog-article--ppf-vs-ceramic .blog-coverage-card__title,
+.blog-article--ppf-vs-ceramic .blog-answer-step__title,
+.blog-article--ppf-vs-ceramic .blog-quote-band__point-title {
+  margin-bottom: 0.7rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-compare-copy__body + .blog-compare-copy__body,
+.blog-article--ppf-vs-ceramic .blog-article-cta__copy,
+.blog-article--ppf-vs-ceramic .blog-answer__copy {
+  margin-top: 1rem;
+}
+
+.blog-article.blog-article--ppf-vs-ceramic {
+  padding-top: 1.75rem;
+}
+
+@media (max-width: 767px) {
+  .blog-article.blog-article--ppf-vs-ceramic {
+    padding-top: 2.3rem;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-compare-copy__title,
+  .blog-article--ppf-vs-ceramic .blog-answer__title,
+  .blog-article--ppf-vs-ceramic .blog-coverage__title,
+  .blog-article--ppf-vs-ceramic .blog-article-cta__title {
+    margin-bottom: 1rem;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-quote-band__title {
+    margin-bottom: 1.15rem;
+  }
+}
+
+
+.blog-article--ppf-vs-ceramic .blog-answer-step {
+  align-content: start;
+  padding: 1.6rem 1.7rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-answer-step__number {
+  font-size: 1rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-answer-step__title {
+  font-size: 1.55rem;
+  line-height: 1.12;
+}
+
+.blog-article--ppf-vs-ceramic .blog-answer-step__copy {
+  font-size: 1.08rem;
+  line-height: 1.76;
+}
+
+@media (max-width: 767px) {
+  .blog-article--ppf-vs-ceramic .blog-answer-step {
+    padding: 1.2rem 1.1rem;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-answer-step__title {
+    font-size: 1.2rem;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-answer-step__copy {
+    font-size: 0.98rem;
+    line-height: 1.68;
+  }
+}
+
+.blog-article--ppf-vs-ceramic .blog-article-cta__overlay {
+  background: linear-gradient(90deg, rgba(6, 6, 6, 0.34) 0%, rgba(6, 6, 6, 0.46) 38%, rgba(6, 6, 6, 0.72) 100%);
+}
+
+.blog-article--ppf-vs-ceramic .blog-article-cta__inner {
+  width: min(100%, 94rem);
+  align-items: flex-end;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.blog-article--ppf-vs-ceramic .blog-article-cta__title,
+.blog-article--ppf-vs-ceramic .blog-article-cta__copy {
+  max-width: 36rem;
+}
+
+.blog-article--ppf-vs-ceramic .blog-article-cta__image {
+  object-position: center 24%;
+}
+
+@media (max-width: 767px) {
+  .blog-article--ppf-vs-ceramic .blog-article-cta__overlay {
+    background: linear-gradient(180deg, rgba(6, 6, 6, 0.48) 0%, rgba(6, 6, 6, 0.58) 45%, rgba(6, 6, 6, 0.74) 100%);
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-article-cta__inner {
+    width: min(100%, 94rem);
+    align-items: flex-start;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-article-cta__image {
+    object-position: center 20%;
+  }
+}
+
+.blog-article--ppf-vs-ceramic .blog-article-cta__title {
+  font-size: clamp(2.4rem, 3.6vw, 4rem);
+  line-height: 0.98;
+}
+
+.blog-article--ppf-vs-ceramic .blog-article-cta__image {
+  object-position: center 24%;
+}
+
+@media (max-width: 767px) {
+  .blog-article--ppf-vs-ceramic .blog-article-cta__title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-article-cta__image {
+    object-position: center 20%;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-article--ppf-vs-ceramic .blog-article-cta {
+    min-height: 38rem;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-article-cta__inner {
+    justify-content: flex-end;
+    padding: 10.5rem 1rem 2.4rem;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-article-cta__image {
+    object-position: 38% 16%;
+  }
+
+  .blog-article--ppf-vs-ceramic .blog-article-cta__title,
+  .blog-article--ppf-vs-ceramic .blog-article-cta__copy {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-article--ppf-vs-ceramic .blog-article-cta__inner {
+    padding: 12rem 1rem 2.2rem;
+  }
+}
+

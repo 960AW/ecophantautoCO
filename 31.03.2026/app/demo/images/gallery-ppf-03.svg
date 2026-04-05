@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1600" role="img" aria-labelledby="title desc">
+<title id="title">Trabajo vertical PPF 3</title>
+<desc id="desc">Visual vertical de prueba para galeria de PPF.</desc>
+<rect width="900" height="1600" fill="#050505"/>
+<rect x="0" y="980" width="900" height="620" fill="#0d0d0d"/>
+<path d="M86 968C244 790 392 696 604 664C708 648 792 654 900 692" fill="none" stroke="#7bbb27" stroke-opacity="0.85" stroke-width="10" stroke-linecap="round"/>
+<circle cx="248" cy="998" r="58" fill="none" stroke="#7bbb27" stroke-width="8"/>
+<circle cx="608" cy="998" r="58" fill="none" stroke="#7bbb27" stroke-width="8"/>
+<rect x="96" y="132" width="204" height="40" fill="#7bbb27" fill-opacity="0.15"/>
+<text x="96" y="220" fill="#7bbb27" font-family="Montserrat, Arial, sans-serif" font-size="38" letter-spacing="12">DETAIL</text>
+<text x="96" y="1212" fill="#ffffff" font-family="Cormorant Garamond, serif" font-size="82">Protege</text>
+<text x="96" y="1292" fill="#ffffff" font-family="Cormorant Garamond, serif" font-size="82">tu auto</text>
+<text x="96" y="1382" fill="#d7d7d7" font-family="Montserrat, Arial, sans-serif" font-size="34">Visual de prueba para layout vertical 9:16</text>
+</svg>

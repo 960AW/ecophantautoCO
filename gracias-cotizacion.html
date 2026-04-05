@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gracias por tu solicitud | Ecophant Auto</title>
+  <meta name="description" content="Gracias por contactar a Ecophant Auto Bogotá. Recibimos tu solicitud y pronto te responderemos.">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="theme-color" content="#000000">
+  <link rel="canonical" href="https://www.ecophantauto.com.co/gracias-cotizacion">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/tailwind-output.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/footer.css">
+  <style>
+    .thanks-page {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 50% 16rem, rgba(138, 201, 38, 0.18), transparent 24%),
+        linear-gradient(180deg, #0b0b0b 0%, #111111 22rem, #eff4e2 22rem, #e6edd5 100%);
+    }
+
+    .thanks-hero {
+      width: min(100%, 84rem);
+      margin: 0 auto;
+      padding: 7rem 1.5rem 5rem;
+    }
+
+    .thanks-card {
+      width: min(100%, 48rem);
+      padding: 2rem 1.7rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 1.5rem;
+      background: #111111;
+      box-shadow: 0 36px 80px -44px rgba(0, 0, 0, 0.52);
+    }
+
+    .thanks-kicker {
+      display: inline-flex;
+      color: #8ac926;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .thanks-title {
+      margin: 0.9rem 0 0;
+      color: #ffffff;
+      font-size: clamp(2.3rem, 5vw, 4.2rem);
+      line-height: 0.96;
+      letter-spacing: -0.04em;
+    }
+
+    .thanks-copy {
+      margin: 1rem 0 0;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 1rem;
+      line-height: 1.75;
+      max-width: 40rem;
+    }
+
+    .thanks-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 1.8rem;
+    }
+
+    .thanks-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3.5rem;
+      padding: 0.95rem 1.5rem;
+      border: 1px solid transparent;
+      background: #4f7c18;
+      color: #111111;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: transform 180ms ease, background-color 180ms ease;
+    }
+
+    .thanks-button:hover,
+    .thanks-button:focus-visible {
+      background: #659c20;
+      transform: translateY(-2px);
+    }
+
+    .thanks-button--ghost {
+      border-color: rgba(255, 255, 255, 0.14);
+      background: transparent;
+      color: #ffffff;
+    }
+
+    .thanks-button--ghost:hover,
+    .thanks-button--ghost:focus-visible {
+      border-color: #8ac926;
+      background: transparent;
+      color: #8ac926;
+    }
+  </style>
+  <script>
+    (function () {
+      var gate = null;
+      var gateTime = null;
+      try {
+        gate = sessionStorage.getItem('ecophant_quote_success_gate');
+        gateTime = Number(sessionStorage.getItem('ecophant_quote_success_gate_time') || '0');
+      } catch (error) {
+      }
+
+      var isFresh = gate === 'pending' && gateTime && (Date.now() - gateTime) < 10 * 60 * 1000;
+      if (!isFresh) {
+        window.location.replace('/cotiza-ahora');
+        return;
+      }
+
+      try {
+        sessionStorage.setItem('ecophant_quote_success_gate', 'used');
+        sessionStorage.removeItem('ecophant_quote_success_gate_time');
+      } catch (error) {
+      }
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'quote_form_success'
+      });
+    })();
+  </script>
+</head>
+<body class="site-body thanks-page">
+  <div data-include="header"></div>
+
+  <main>
+    <section class="thanks-hero">
+      <div class="thanks-card">
+        <span class="thanks-kicker">Solicitud recibida</span>
+        <h1 class="thanks-title site-display-font">Gracias por escribirnos.</h1>
+        <p class="thanks-copy">Recibimos tu solicitud y nuestro equipo de Ecophant Auto la revisará para responderte con una orientación más clara según el servicio y el carro que nos compartiste.</p>
+        <p class="thanks-copy">Si quieres acelerar el contacto, también puedes escribirnos por WhatsApp.</p>
+        <div class="thanks-actions">
+          <a href="https://wa.me/573122222748" class="thanks-button">Ir a WhatsApp</a>
+          <a href="/" class="thanks-button thanks-button--ghost">Volver al inicio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="./js/header.js" defer></script>
+  <script src="./js/includes.js" defer></script>
+</body>
+</html>

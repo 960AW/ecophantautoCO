@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1600" role="img" aria-labelledby="title desc">
+<title id="title">Trabajo vertical PPF 2</title>
+<desc id="desc">Visual vertical de prueba para galeria de PPF.</desc>
+<defs><linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a0a"/><stop offset="100%" stop-color="#161616"/></linearGradient></defs>
+<rect width="900" height="1600" fill="url(#bg2)"/>
+<rect x="120" y="150" width="660" height="940" rx="42" fill="#131313" stroke="#2b4210" stroke-width="4"/>
+<path d="M190 900C290 730 430 650 610 624C678 614 724 616 766 626" fill="none" stroke="#7bbb27" stroke-width="10" stroke-linecap="round"/>
+<circle cx="302" cy="918" r="52" fill="none" stroke="#7bbb27" stroke-width="7"/>
+<circle cx="602" cy="918" r="52" fill="none" stroke="#7bbb27" stroke-width="7"/>
+<path d="M162 1168H738" stroke="#7bbb27" stroke-opacity="0.45" stroke-width="2"/>
+<text x="120" y="1228" fill="#7bbb27" font-family="Montserrat, Arial, sans-serif" font-size="28" letter-spacing="8">ECO PHANT AUTO</text>
+<text x="120" y="1328" fill="#ffffff" font-family="Cormorant Garamond, serif" font-size="86">Acabado</text>
+<text x="120" y="1412" fill="#ffffff" font-family="Cormorant Garamond, serif" font-size="86">limpio</text>
+</svg>
