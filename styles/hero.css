@@ -296,18 +296,19 @@
   font-weight: 500;
   line-height: 0.92;
   letter-spacing: -0.03em;
-  text-wrap: balance;
+  text-wrap: auto;
   text-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
   min-height: 1.9em;
 }
 
 .hero-slider__description {
   max-width: 36rem;
+  min-height: 4.8rem;
   margin: 1.8rem 0 0;
   color: rgba(255, 255, 255, 0.78);
   font-size: clamp(1rem, 1.4vw, 1.22rem);
   line-height: 1.9;
-  text-wrap: pretty;
+  text-wrap: auto;
 }
 
 .hero-slider__cta {
@@ -519,11 +520,12 @@
   .hero-slider__title {
     font-size: clamp(2.5rem, 11vw, 4rem);
     line-height: 0.94;
-    min-height: 2em;
+    min-height: 2.8em;
   }
 
   .hero-slider__description {
     max-width: 22rem;
+    min-height: 6.8rem;
     margin-top: 1rem;
     margin-inline: auto;
     font-size: 0.95rem;

@@ -17,14 +17,21 @@ if (servicesCarousel) {
 
   const getMaxIndex = () => Math.max(0, slides.length - getVisibleCount());
 
+  const getOffsetExpression = () => {
+    if (window.innerWidth < 768) {
+      return `${activeIndex} * (100% + 0.85rem)`;
+    }
+
+    if (window.innerWidth < 1024) {
+      return `${activeIndex} * ((100% + 1.25rem) / 2)`;
+    }
+
+    return `${activeIndex} * ((100% + 1.25rem) / 3)`;
+  };
+
   const render = () => {
     if (!track || slides.length === 0) return;
-
-    const trackStyles = window.getComputedStyle(track);
-    const gap = parseFloat(trackStyles.gap || trackStyles.columnGap || '0') || 0;
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    const offset = activeIndex * (slideWidth + gap);
-    track.style.transform = `translateX(-${offset}px)`;
+    track.style.transform = `translateX(calc(-1 * (${getOffsetExpression()})))`;
   };
 
   const goTo = (nextIndex) => {

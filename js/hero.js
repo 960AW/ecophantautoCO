@@ -7,6 +7,7 @@ if (heroSlider) {
   const nextButton = heroSlider.querySelector('[data-hero-next]');
   const progressBar = heroSlider.querySelector('[data-hero-progress]');
   const autoplayDelay = 5000;
+  const initialAutoplayDelay = 12000;
   let activeIndex = 0;
   let autoplayId = null;
   let transitionCleanupId = null;
@@ -200,7 +201,7 @@ if (heroSlider) {
     restartProgress();
   };
 
-  const scheduleAutoplay = () => {
+  const scheduleAutoplay = (delay = autoplayDelay) => {
     window.clearTimeout(autoplayId);
     autoplayId = window.setTimeout(() => {
       if (!hasStartedTransitions) {
@@ -209,7 +210,7 @@ if (heroSlider) {
       }
       syncSlides((activeIndex + 1) % slides.length);
       scheduleAutoplay();
-    }, autoplayDelay);
+    }, delay);
   };
 
   const goToSlide = (nextIndex) => {
@@ -270,5 +271,5 @@ if (heroSlider) {
 
   ensureSlideMedia(activeIndex);
   syncSlides(activeIndex);
-  scheduleAutoplay();
+  scheduleAutoplay(initialAutoplayDelay);
 }
