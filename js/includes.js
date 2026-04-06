@@ -1,3 +1,38 @@
+const GTM_ID = 'GTM-548QWJPN';
+
+const initGoogleTagManager = () => {
+  if (!document.head || !document.body) {
+    return;
+  }
+
+  window.dataLayer = window.dataLayer || [];
+
+  if (!document.querySelector('script[data-gtm-loader]')) {
+    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+
+    const firstScript = document.head.querySelector('script');
+    const gtmScript = document.createElement('script');
+    gtmScript.async = true;
+    gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=' + GTM_ID;
+    gtmScript.dataset.gtmLoader = 'true';
+
+    if (firstScript) {
+      firstScript.parentNode.insertBefore(gtmScript, firstScript);
+    } else {
+      document.head.prepend(gtmScript);
+    }
+  }
+
+  if (!document.querySelector('noscript[data-gtm-noscript]')) {
+    const noScript = document.createElement('noscript');
+    noScript.dataset.gtmNoscript = 'true';
+    noScript.innerHTML = '<iframe src="https://www.googletagmanager.com/ns.html?id=' + GTM_ID + '" height="0" width="0" style="display:none;visibility:hidden"></iframe>';
+    document.body.insertAdjacentElement('afterbegin', noScript);
+  }
+};
+
+initGoogleTagManager();
+
 const includeTargets = Array.from(document.querySelectorAll('[data-include]'));
 const includeBasePath = document.body.dataset.includeBasePath || '/components';
 
