@@ -189,6 +189,7 @@ const initSiteTracking = () => {
   }
 
   let inlineFormStarted = false;
+  let inlineFormSuccessTracked = false;
   const inlineForm = document.querySelector('.leform-inline[data-id="69"]');
   if (inlineForm) {
     const markInlineFormStart = () => {
@@ -197,9 +198,55 @@ const initSiteTracking = () => {
       pushTrackingEvent('form_start', { form_id: 'leform-69' });
     };
 
+    const handleLeformSuccess = () => {
+      if (inlineFormSuccessTracked) return;
+      inlineFormSuccessTracked = true;
+
+      pushTrackingEvent('form_submit', {
+        form_id: 'leform-69',
+        lead_type: 'quote_form_inline'
+      });
+
+      pushTrackingEvent('generate_lead', {
+        form_id: 'leform-69',
+        lead_type: 'quote_form_inline',
+        conversion_page: 'cotiza_ahora_inline_confirmation'
+      });
+    };
+
     inlineForm.addEventListener('focusin', markInlineFormStart);
     inlineForm.addEventListener('input', markInlineFormStart);
     inlineForm.addEventListener('pointerdown', markInlineFormStart);
+
+    document.addEventListener('submit', (event) => {
+      if (event.target && event.target.closest('.leform-inline[data-id="69"]')) {
+        markInlineFormStart();
+      }
+    }, true);
+
+    document.addEventListener('click', (event) => {
+      const trigger = event.target.closest('.leform-inline[data-id="69"] button, .leform-inline[data-id="69"] input[type="submit"], .leform-inline[data-id="69"] .leform-button');
+      if (trigger) {
+        markInlineFormStart();
+      }
+    }, true);
+
+    const successObserver = new MutationObserver(() => {
+      const successNode = inlineForm.querySelector('.leform-success, .leform-message-success, .leform-form-success, .leform-notification-success, [class*="success"]');
+      const successText = normalizeTrackingText(inlineForm.textContent || '').toLowerCase();
+      const hasSuccessText = successText.includes('gracias') || successText.includes('hemos recibido') || successText.includes('successfully sent') || successText.includes('thank you') || successText.includes('we will contact you soon');
+
+      if (successNode || hasSuccessText) {
+        handleLeformSuccess();
+      }
+    });
+
+    successObserver.observe(inlineForm, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      characterData: true
+    });
   }
 };
 
