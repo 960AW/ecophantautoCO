@@ -266,10 +266,11 @@ if (heroSlider) {
   });
 
   heroSlider.addEventListener('mouseleave', () => {
-    scheduleAutoplay();
+    if (hasStartedTransitions) {
+      scheduleAutoplay();
+    }
   });
 
   ensureSlideMedia(activeIndex);
   syncSlides(activeIndex);
-  scheduleAutoplay(initialAutoplayDelay);
 }
