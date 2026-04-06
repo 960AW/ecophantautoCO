@@ -8,30 +8,31 @@ if (servicesCarousel) {
   const autoplayDelay = 4200;
   let activeIndex = 0;
   let autoplayId = null;
+  let visibleCount = 3;
+  let offsetExpression = '0 * ((100% + 1.25rem) / 3)';
 
-  const getVisibleCount = () => {
-    if (window.innerWidth < 768) return 1;
-    if (window.innerWidth < 1024) return 2;
-    return 3;
-  };
-
-  const getMaxIndex = () => Math.max(0, slides.length - getVisibleCount());
-
-  const getOffsetExpression = () => {
-    if (window.innerWidth < 768) {
-      return `${activeIndex} * (100% + 0.85rem)`;
+  const syncViewportMetrics = () => {
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      visibleCount = 1;
+      offsetExpression = `${activeIndex} * (100% + 0.85rem)`;
+      return;
     }
 
-    if (window.innerWidth < 1024) {
-      return `${activeIndex} * ((100% + 1.25rem) / 2)`;
+    if (window.matchMedia('(max-width: 1023px)').matches) {
+      visibleCount = 2;
+      offsetExpression = `${activeIndex} * ((100% + 1.25rem) / 2)`;
+      return;
     }
 
-    return `${activeIndex} * ((100% + 1.25rem) / 3)`;
+    visibleCount = 3;
+    offsetExpression = `${activeIndex} * ((100% + 1.25rem) / 3)`;
   };
+
+  const getMaxIndex = () => Math.max(0, slides.length - visibleCount);
 
   const render = () => {
     if (!track || slides.length === 0) return;
-    track.style.transform = `translateX(calc(-1 * (${getOffsetExpression()})))`;
+    track.style.transform = `translateX(calc(-1 * (${offsetExpression})))`;
   };
 
   const goTo = (nextIndex) => {
@@ -63,10 +64,12 @@ if (servicesCarousel) {
   servicesCarousel.addEventListener('mouseenter', () => window.clearTimeout(autoplayId));
   servicesCarousel.addEventListener('mouseleave', () => scheduleAutoplay());
   window.addEventListener('resize', () => {
+    syncViewportMetrics();
     activeIndex = Math.min(activeIndex, getMaxIndex());
     render();
   });
 
+  syncViewportMetrics();
   render();
   scheduleAutoplay();
 }
