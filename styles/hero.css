@@ -505,7 +505,7 @@
 
   .hero-slider__content {
     width: 100%;
-    padding: 6rem 1rem 13.5rem;
+    padding: 7.25rem 1rem 13.5rem;
     justify-content: flex-end;
     align-items: center;
     text-align: center;
@@ -520,13 +520,13 @@
   .hero-slider__title {
     font-size: clamp(2.5rem, 11vw, 4rem);
     line-height: 0.94;
-    min-height: 3.4em;
+    min-height: 2.15em;
   }
 
   .hero-slider__description {
     max-width: 22rem;
-    min-height: 8.2rem;
-    margin-top: 1rem;
+    min-height: 0;
+    margin-top: 0.35rem;
     margin-inline: auto;
     font-size: 0.95rem;
     line-height: 1.68;
