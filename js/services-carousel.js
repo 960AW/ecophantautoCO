@@ -9,30 +9,38 @@ if (servicesCarousel) {
   let activeIndex = 0;
   let autoplayId = null;
   let visibleCount = 3;
-  let offsetExpression = '0 * ((100% + 1.25rem) / 3)';
 
   const syncViewportMetrics = () => {
     if (window.matchMedia('(max-width: 767px)').matches) {
       visibleCount = 1;
-      offsetExpression = `${activeIndex} * (100% + 0.85rem)`;
       return;
     }
 
     if (window.matchMedia('(max-width: 1023px)').matches) {
       visibleCount = 2;
-      offsetExpression = `${activeIndex} * ((100% + 1.25rem) / 2)`;
       return;
     }
 
     visibleCount = 3;
-    offsetExpression = `${activeIndex} * ((100% + 1.25rem) / 3)`;
   };
 
   const getMaxIndex = () => Math.max(0, slides.length - visibleCount);
 
+  const getOffsetExpression = () => {
+    if (visibleCount === 1) {
+      return `${activeIndex} * (100% + 0.85rem)`;
+    }
+
+    if (visibleCount === 2) {
+      return `${activeIndex} * ((100% + 1.25rem) / 2)`;
+    }
+
+    return `${activeIndex} * ((100% + 1.25rem) / 3)`;
+  };
+
   const render = () => {
     if (!track || slides.length === 0) return;
-    track.style.transform = `translateX(calc(-1 * (${offsetExpression})))`;
+    track.style.transform = `translateX(calc(-1 * (${getOffsetExpression()})))`;
   };
 
   const goTo = (nextIndex) => {
