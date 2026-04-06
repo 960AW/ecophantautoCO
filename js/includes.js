@@ -36,6 +36,180 @@ initGoogleTagManager();
 const includeTargets = Array.from(document.querySelectorAll('[data-include]'));
 const includeBasePath = document.body.dataset.includeBasePath || '/components';
 
+const getPageType = () => {
+  const path = window.location.pathname.replace(/\/+$/, '') || '/';
+
+  if (path === '/') return 'home';
+  if (path === '/quienes-somos') return 'about';
+  if (path === '/cotiza-ahora') return 'quote';
+  if (path === '/gracias-cotizacion') return 'thank_you';
+  if (path === '/blog-detailing' || path === '/blog-detailing/') return 'blog_index';
+  if (path.startsWith('/blog-detailing/')) return 'blog_post';
+  if (path.startsWith('/servicios/')) return 'service';
+
+  return 'page';
+};
+
+const getServiceNameFromPath = () => {
+  const path = window.location.pathname.replace(/\/+$/, '');
+  const serviceMap = {
+    '/servicios/ppf-paint-protection-film': 'ppf',
+    '/servicios/ceramic-coating': 'ceramic',
+    '/servicios/polarizado-de-vidrios': 'polarizado',
+    '/servicios/vinyl-wrap': 'vinyl_wrap',
+    '/servicios/auto-detailing': 'auto_detailing'
+  };
+
+  return serviceMap[path] || '';
+};
+
+const normalizeTrackingText = (value) => (value || '')
+  .replace(/\s+/g, ' ')
+  .trim();
+
+const getTrackingLocation = (element) => {
+  if (!element) return 'unknown';
+
+  const area = element.closest('header, footer, main, section, article, aside, nav, div');
+  const className = area && typeof area.className === 'string' ? area.className : '';
+  const id = area && area.id ? area.id : '';
+  const source = (className + ' ' + id).toLowerCase();
+
+  if (source.includes('site-header')) return 'header';
+  if (source.includes('hero-slider')) return 'hero';
+  if (source.includes('quote-form-hero')) return 'quote_hero';
+  if (source.includes('quote-inline-shell')) return 'quote_inline';
+  if (source.includes('quote-modal')) return 'quote_modal';
+  if (source.includes('service-hero')) return 'service_hero';
+  if (source.includes('service-packages')) return 'packages';
+  if (source.includes('service-faq')) return 'faq';
+  if (source.includes('services-section')) return 'services_section';
+  if (source.includes('blog-section')) return 'blog_section';
+  if (source.includes('site-footer__reviews')) return 'footer_reviews';
+  if (source.includes('site-footer')) return 'footer';
+
+  return 'content';
+};
+
+const pushTrackingEvent = (eventName, detail = {}) => {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: eventName,
+    page_type: getPageType(),
+    page_path: window.location.pathname,
+    page_title: document.title,
+    service_name: getServiceNameFromPath(),
+    ...detail
+  });
+};
+
+const initSiteTracking = () => {
+  const pageType = getPageType();
+  const serviceName = getServiceNameFromPath();
+  const articleTitle = normalizeTrackingText(document.querySelector('main h1')?.textContent || '');
+
+  if (pageType === 'service' && serviceName) {
+    pushTrackingEvent('view_service', { service_name: serviceName });
+  }
+
+  if (pageType === 'blog_post') {
+    pushTrackingEvent('view_blog_post', { article_name: articleTitle || document.title });
+  }
+
+  if (pageType === 'thank_you') {
+    pushTrackingEvent('generate_lead', { lead_type: 'quote_form', conversion_page: 'gracias_cotizacion' });
+  }
+
+  document.addEventListener('click', (event) => {
+    const target = event.target.closest('a, button');
+    if (!target) return;
+
+    const label = normalizeTrackingText(target.textContent || target.getAttribute('aria-label') || '');
+    const href = target.getAttribute('href') || '';
+    const lowerLabel = label.toLowerCase();
+    const className = typeof target.className === 'string' ? target.className.toLowerCase() : '';
+
+    if (href.startsWith('https://wa.me/') || href.includes('api.whatsapp.com')) {
+      pushTrackingEvent('whatsapp_click', {
+        cta_label: label || 'WhatsApp',
+        cta_location: getTrackingLocation(target)
+      });
+      return;
+    }
+
+    if (href.startsWith('tel:')) {
+      pushTrackingEvent('phone_click', {
+        cta_label: label || href,
+        cta_location: getTrackingLocation(target)
+      });
+      return;
+    }
+
+    if (href.startsWith('mailto:')) {
+      pushTrackingEvent('email_click', {
+        cta_label: label || href,
+        cta_location: getTrackingLocation(target)
+      });
+      return;
+    }
+
+    const looksLikeCta =
+      className.includes('cta') ||
+      className.includes('button') ||
+      lowerLabel.includes('cotiza') ||
+      lowerLabel.includes('whatsapp') ||
+      lowerLabel.includes('llama') ||
+      lowerLabel.includes('escrib') ||
+      lowerLabel.includes('conoce') ||
+      lowerLabel.includes('mas info') ||
+      lowerLabel.includes('m s info') ||
+      lowerLabel.includes('ver mas') ||
+      lowerLabel.includes('presupuesto');
+
+    if (looksLikeCta) {
+      pushTrackingEvent('cta_click', {
+        cta_label: label || target.id || 'cta',
+        cta_location: getTrackingLocation(target),
+        destination: href || ''
+      });
+    }
+  }, { passive: true });
+
+  let quoteFormStarted = false;
+  const quoteForm = document.getElementById('quote-form');
+  if (quoteForm) {
+    const markQuoteFormStart = () => {
+      if (quoteFormStarted) return;
+      quoteFormStarted = true;
+      pushTrackingEvent('form_start', { form_id: 'quote-form' });
+    };
+
+    quoteForm.addEventListener('focusin', markQuoteFormStart);
+    quoteForm.addEventListener('input', markQuoteFormStart);
+  }
+
+  let inlineFormStarted = false;
+  const inlineForm = document.querySelector('.leform-inline[data-id="69"]');
+  if (inlineForm) {
+    const markInlineFormStart = () => {
+      if (inlineFormStarted) return;
+      inlineFormStarted = true;
+      pushTrackingEvent('form_start', { form_id: 'leform-69' });
+    };
+
+    inlineForm.addEventListener('focusin', markInlineFormStart);
+    inlineForm.addEventListener('input', markInlineFormStart);
+    inlineForm.addEventListener('pointerdown', markInlineFormStart);
+  }
+};
+
+window.EcophantTracking = {
+  getPageType,
+  getServiceNameFromPath,
+  pushTrackingEvent
+};
+
+initSiteTracking();
 const initFooterReviews = () => {
   const carousels = Array.from(document.querySelectorAll('[data-reviews-carousel]'));
 

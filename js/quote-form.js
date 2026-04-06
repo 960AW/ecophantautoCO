@@ -1,4 +1,4 @@
-﻿(() => {
+(() => {
   const form = document.getElementById('quote-form');
   const modal = document.getElementById('quote-modal');
   const openButtons = Array.from(document.querySelectorAll('[data-open-quote-modal]'));
@@ -454,13 +454,41 @@
       ]);
       window.clearTimeout(requestTimeout);
 
+      if (window.EcophantTracking && typeof window.EcophantTracking.pushTrackingEvent === 'function') {
+        window.EcophantTracking.pushTrackingEvent('form_submit', {
+          form_id: 'quote-form',
+          lead_type: 'quote_form',
+          selected_services: payload.services,
+          selected_services_text: payload.servicesText,
+          attachment_count: payload.attachmentCount
+        });
+      } else {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'form_submit',
+          form_id: 'quote-form',
+          lead_type: 'quote_form',
+          selected_services: payload.services,
+          selected_services_text: payload.servicesText,
+          attachment_count: payload.attachmentCount
+        });
+      }
+
+      try {
+        sessionStorage.setItem('ecophant_quote_success_gate', 'pending');
+        sessionStorage.setItem('ecophant_quote_success_gate_time', String(Date.now()));
+      } catch (storageError) {
+      }
+
       form.reset();
       step = 0;
       toggleOtherMake();
       toggleOtherColor();
       updateStep();
       setStatus('Solicitud enviada. Te responderemos pronto.', 'is-success');
-      window.setTimeout(closeModal, 900);
+      window.setTimeout(() => {
+        window.location.href = '/gracias-cotizacion';
+      }, 450);
     } catch (error) {
       const message = error && error.name === 'AbortError'
         ? 'La solicitud tardo demasiado. Revisa la configuración de EmailJS o Make e intenta de nuevo.'
