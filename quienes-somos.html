@@ -29,10 +29,14 @@
   
   
   
-  <link rel="stylesheet" href="./styles/tailwind-output.css">
-  <link rel="stylesheet" href="./styles/base.css">
-  <link rel="stylesheet" href="./styles/header.css">
-  <link rel="stylesheet" href="./styles/about.css">
+  <link rel="preload" href="./styles/tailwind-output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="./styles/base.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="./styles/header.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="./styles/about.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="./styles/tailwind-output.css"></noscript>
+  <noscript><link rel="stylesheet" href="./styles/base.css"></noscript>
+  <noscript><link rel="stylesheet" href="./styles/header.css"></noscript>
+  <noscript><link rel="stylesheet" href="./styles/about.css"></noscript>
   <link rel="stylesheet" href="./styles/footer.css">  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
   <link rel="icon" href="./favicon.ico" sizes="any">

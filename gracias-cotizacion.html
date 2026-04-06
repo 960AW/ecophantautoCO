@@ -10,9 +10,12 @@
   <link rel="canonical" href="https://www.ecophantauto.com.co/gracias-cotizacion">
   <link rel="preload" href="./fonts/cormorant-garamond-v21-latin-500.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/montserrat-v31-latin-regular.woff2" as="font" type="font/woff2" crossorigin>  <link rel="stylesheet" href="./styles/tailwind-output.css">
-  <link rel="stylesheet" href="./styles/base.css">
-  <link rel="stylesheet" href="./styles/header.css">
-  <link rel="stylesheet" href="./styles/footer.css">
+  <link rel="preload" href="./styles/base.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="./styles/header.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="./styles/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="./styles/base.css"></noscript>
+  <noscript><link rel="stylesheet" href="./styles/header.css"></noscript>
+  <noscript><link rel="stylesheet" href="./styles/footer.css"></noscript>
   <style>
     .thanks-page {
       min-height: 100vh;
