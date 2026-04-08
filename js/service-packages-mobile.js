@@ -1,17 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
   const sections = Array.from(document.querySelectorAll('[data-mobile-package-tabs]'));
 
   sections.forEach((section) => {
     const grid = section.querySelector('.service-packages__grid');
     const cards = Array.from(section.querySelectorAll('.service-packages__card'));
 
-    if (!grid || cards.length !== 3) {
+    if (!grid || cards.length < 2) {
       return;
     }
 
     const tabs = document.createElement('div');
     tabs.className = 'service-packages__mobile-tabs';
     tabs.setAttribute('aria-label', 'Seleccion de paquetes');
+    tabs.style.setProperty('--service-package-mobile-columns', String(cards.length));
 
     let activeIndex = 0;
 
@@ -59,3 +60,4 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', syncLayout);
   });
 });
+

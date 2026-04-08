@@ -930,3 +930,256 @@
     display: flex;
   }
 }
+.service-packages__groups {
+  display: grid;
+  gap: 2rem;
+}
+
+.service-packages__group {
+  padding: 1.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(14, 15, 15, 0.78) 0%, rgba(9, 10, 10, 0.94) 100%);
+  box-shadow: 0 28px 72px -48px rgba(0, 0, 0, 0.72);
+}
+
+.service-packages__group--ion {
+  border-color: rgba(255, 39, 149, 0.34);
+  background:
+    radial-gradient(circle at top right, rgba(255, 39, 149, 0.16), transparent 28%),
+    linear-gradient(180deg, rgba(18, 8, 16, 0.82) 0%, rgba(9, 9, 10, 0.96) 100%);
+  box-shadow: 0 34px 88px -48px rgba(255, 39, 149, 0.24);
+}
+
+.service-packages__group-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 1.8rem;
+  align-items: end;
+  margin-bottom: 1.65rem;
+}
+
+.service-packages__group-copy {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.service-packages__group-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.7rem, 2.5vw, 2.7rem);
+  font-weight: 500;
+  line-height: 0.94;
+}
+
+.service-packages__group-title span {
+  color: #7bbb27;
+}
+
+.service-packages__group--ion .service-packages__group-title span {
+  color: #ff2f9c;
+}
+
+.service-packages__group-lead,
+.service-packages__group-note {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+.service-packages__group-note {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.service-packages__group-note a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: rgba(123, 187, 39, 0.52);
+  text-underline-offset: 0.18em;
+}
+
+.service-packages__group--ion .service-packages__group-note a {
+  text-decoration-color: rgba(255, 47, 156, 0.58);
+}
+
+.service-packages__group [data-mobile-package-tabs] .service-packages__grid {
+  display: grid;
+}
+
+.service-packages__card--ion,
+.service-packages__card--ion-featured {
+  border-color: rgba(255, 39, 149, 0.22);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(18, 12, 16, 0.96) 100%);
+}
+
+.service-packages__card--ion::before,
+.service-packages__card--ion-featured::before {
+  height: 0.42rem;
+  background: linear-gradient(90deg, rgba(255, 47, 156, 0.2) 0%, #ff2f9c 42%, rgba(255, 47, 156, 0.2) 100%);
+}
+
+.service-packages__card--ion .service-packages__plan,
+.service-packages__card--ion-featured .service-packages__plan {
+  color: #ff63b3;
+}
+
+.service-packages__card--ion .service-packages__price,
+.service-packages__card--ion-featured .service-packages__price {
+  border-color: rgba(255, 47, 156, 0.28);
+  background: linear-gradient(135deg, rgba(255, 47, 156, 0.18) 0%, rgba(255, 47, 156, 0.06) 100%);
+}
+
+.service-packages__card--ion .service-packages__feature::before,
+.service-packages__card--ion-featured .service-packages__feature::before {
+  background: #ff63b3;
+}
+
+.service-packages__card--ion-featured {
+  border-color: rgba(255, 47, 156, 0.44);
+  box-shadow: 0 38px 96px -46px rgba(255, 39, 149, 0.34);
+}
+
+.service-packages__card--ion-featured::after {
+  content: '';
+  position: absolute;
+  inset: 1.1rem;
+  border: 1px solid rgba(255, 47, 156, 0.16);
+  pointer-events: none;
+}
+
+.service-packages__card--ion-featured .service-packages__badge {
+  background: rgba(255, 47, 156, 0.14);
+  border-color: rgba(255, 47, 156, 0.34);
+  color: #ffc7e5;
+}
+
+.service-packages__card--ion-featured:hover,
+.service-packages__card--ion-featured:focus-within,
+.service-packages__card--ion:hover,
+.service-packages__card--ion:focus-within {
+  border-color: rgba(255, 47, 156, 0.42);
+  box-shadow: 0 32px 80px -42px rgba(255, 39, 149, 0.4);
+}
+
+.service-packages__card--ion .service-packages__cta,
+.service-packages__card--ion-featured .service-packages__cta {
+  border-color: rgba(255, 47, 156, 0.54);
+  background: #ff2f9c;
+  color: #ffffff;
+  box-shadow: 0 18px 34px -22px rgba(255, 39, 149, 0.52);
+}
+
+.service-packages__card--ion .service-packages__cta:hover,
+.service-packages__card--ion .service-packages__cta:focus-visible,
+.service-packages__card--ion-featured .service-packages__cta:hover,
+.service-packages__card--ion-featured .service-packages__cta:focus-visible {
+  background: #ff4fad;
+  box-shadow: 0 20px 38px -22px rgba(255, 39, 149, 0.62);
+}
+@media (max-width: 1023px) {
+  .service-packages__group-intro {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-packages__groups {
+    gap: 1.25rem;
+  }
+
+  .service-packages__group {
+    padding: 1.2rem;
+  }
+
+  .service-packages__group-title {
+    font-size: 1.85rem;
+  }
+
+  [data-mobile-package-tabs] .service-packages__mobile-tabs {
+    grid-template-columns: repeat(var(--service-package-mobile-columns, 3), minmax(0, 1fr));
+  }
+
+  [data-mobile-package-tabs] .service-packages__mobile-tab-label {
+    font-size: 0.82rem;
+  }
+}
+
+.service-packages__group-brandproof {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.service-packages__group-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.4rem;
+  min-width: 5.4rem;
+  aspect-ratio: 1;
+  padding: 0.7rem;
+  border: 1px solid rgba(255, 47, 156, 0.24);
+  background: white;
+  box-shadow: 0 20px 42px -28px rgba(255, 39, 149, 0.28);
+}
+
+.service-packages__group-badge-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .service-packages__group-brandproof {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .service-packages__group-badge {
+    width: 4.9rem;
+    min-width: 4.9rem;
+  }
+}
+.service-packages__card--ion-featured {
+  padding-top: 4.25rem;
+}
+
+.service-packages__card--ion-featured .service-packages__badge {
+  top: 1.05rem;
+  right: 1.05rem;
+  max-width: calc(100% - 2.1rem);
+  padding: 0.58rem 0.8rem;
+  font-size: 0.72rem;
+  line-height: 1.15;
+  letter-spacing: 0.14em;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .service-packages__group--ion[data-mobile-package-tabs] .service-packages__mobile-tab::after {
+    background: rgba(255, 47, 156, 0.28);
+  }
+
+  .service-packages__group--ion[data-mobile-package-tabs] .service-packages__mobile-tab.is-active {
+    border-color: rgba(255, 47, 156, 0.42);
+    background: linear-gradient(180deg, rgba(255, 47, 156, 0.18) 0%, rgba(22, 10, 18, 0.94) 100%);
+  }
+
+  .service-packages__group--ion[data-mobile-package-tabs] .service-packages__mobile-tab-step {
+    color: #ff63b3;
+  }
+
+  .service-packages__card--ion-featured {
+    padding-top: 4.6rem;
+  }
+
+  .service-packages__card--ion-featured .service-packages__badge {
+    left: 1rem;
+    right: 1rem;
+    max-width: none;
+    justify-content: center;
+  }
+}
