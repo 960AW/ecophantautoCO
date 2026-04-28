@@ -54,7 +54,7 @@ const getServiceNameFromPath = () => {
   const path = window.location.pathname.replace(/\/+$/, '');
   const serviceMap = {
     '/servicios/ppf-paint-protection-film': 'ppf',
-    '/servicios/ceramic-coating': 'ceramic',
+    '/servicios/recubrimiento-ceramico-bogota': 'ceramic',
     '/servicios/polarizado-de-vidrios': 'polarizado',
     '/servicios/vinyl-wrap': 'vinyl_wrap',
     '/servicios/auto-detailing': 'auto_detailing'

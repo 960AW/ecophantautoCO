@@ -56,7 +56,13 @@ if (serviceHero) {
       numberTarget.textContent = String(activeIndex + 1).padStart(2, '0');
     }
 
-    if (!typingTarget) return;
+    if (!typingTarget) {
+      timeoutId = window.setTimeout(() => {
+        activeIndex = (activeIndex + 1) % benefits.length;
+        renderState();
+      }, changeDelay);
+      return;
+    }
 
     typingTarget.textContent = '';
     const fullText = `${prefix}${benefit}`;
